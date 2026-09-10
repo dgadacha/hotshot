@@ -337,6 +337,6 @@ Create a single game-ready 3D asset from this reference image. Preserve its chun
 
 Le [manifeste](manifest.json) référence les 26 PNG sélectionnés, leurs dimensions et leurs prompts. Le fusil d’assaut utilise la version 2 ; la première version reste archivée dans le dépôt. Les autres références utilisent leur version 1. Les cadrages conservent chaque asset entier ; certains restent serrés et ne remplacent pas le cadrage final des icônes de HUD.
 
-Les images ont été revues visuellement et les fichiers PNG RGBA vérifiés. Aucun GLB ni PNG de HUD final n’a encore été livré : la prochaine étape est leur génération à partir de ces références, puis leur dépôt dans `incoming/`.
+Les images ont été revues visuellement et les fichiers PNG RGBA vérifiés. **Le fusil d’assaut est livré et intégré** : son GLB texturé apparaît en vue FPS et chez l’adversaire, et son PNG dans le HUD. Les fichiers fournis à la racine sous le nom `weapon_assault_rifle_3q_v2` sont conservés ; leur copie utilisée par le jeu est dans `public/assets/weapons/`. Le manifeste enregistre cette livraison. Les 25 autres GLB et PNG restent à produire et à déposer dans `incoming/`.
 
 Mode utilisé : **outil imagegen intégré**. Chaque prompt exact est conservé dans `prompts/generated/`, avec une fiche JSON correspondant à l’image. Les prompts de base restent disponibles dans `prompts/`.

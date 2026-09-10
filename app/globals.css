@@ -631,6 +631,14 @@ h2 {
   letter-spacing: 0.06em;
   color: #ffdc82;
 }
+.weapon-hud-image {
+  display: block;
+  width: 180px;
+  height: 105px;
+  margin: 0 0 5px auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px #101d22aa);
+}
 .ammo-panel strong {
   font-family: Impact, Arial, sans-serif;
   font-size: 62px;

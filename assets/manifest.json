@@ -32,13 +32,18 @@
       "targetSize": "1,05 m de long",
       "referenceStatus": "generated",
       "reference": "references/weapon_assault_rifle_3q_v2.png",
-      "glbReceived": false,
-      "hudPngReceived": false,
+      "glbReceived": true,
+      "hudPngReceived": true,
       "usedPrompt": "prompts/generated/weapon_assault_rifle_3q_v2.txt",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "integrationStatus": "integrated",
+      "runtimeGlb": "/assets/weapons/weapon_assault_rifle.glb",
+      "runtimeHudPng": "/assets/weapons/weapon_assault_rifle.png",
+      "sourceDelivery": "weapon_assault_rifle_3q_v2",
+      "deliveryTriangles": 29829
     },
     {
       "id": "weapon_grenade_launcher",

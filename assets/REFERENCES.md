@@ -22,7 +22,7 @@ Les [dimensions et consignes de production](ASSET_PRODUCTION.md) complètent ces
 
 [PNG original](references/weapon_assault_rifle_3q_v2.png) · [Prompt exact utilisé](prompts/generated/weapon_assault_rifle_3q_v2.txt)
 
-À livrer : `weapon_assault_rifle.glb` + `weapon_assault_rifle.png`. Taille cible : 1,05 m de long.
+**Livré et intégré** : [GLB](../public/assets/weapons/weapon_assault_rifle.glb) + [PNG du HUD](../public/assets/weapons/weapon_assault_rifle.png). Longueur en jeu : 1,05 m. Utilisé en vue FPS et chez l’adversaire.
 
 ### Grenade Launcher — `weapon_grenade_launcher`
 

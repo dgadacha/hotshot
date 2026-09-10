@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-export function makeGunner(world, slot) {
+export function makeGunner(world, slot, assets) {
   const group = new THREE.Group(),
     color = slot === 0 ? 0x359eca : 0xe0523f;
   const b = (x, y, z, w, h, d, c) => world.box(x, y, z, w, h, d, c, group);
@@ -17,8 +17,26 @@ export function makeGunner(world, slot) {
     legs.push(leg);
     b(s * 0.24, 0.1, -0.09, 0.39, 0.2, 0.58, 0x1c272b);
   }
-  b(0.3, 1.02, -0.5, 0.25, 0.24, 0.78, 0x263538);
-  b(0.3, 1.05, -0.95, 0.12, 0.12, 0.32, 0xc6ae63);
+  const fallback = new THREE.Group();
+  group.add(fallback);
+  world.box(0.3, 1.02, -0.5, 0.25, 0.24, 0.78, 0x263538, fallback);
+  world.box(0.3, 1.05, -0.95, 0.12, 0.12, 0.32, 0xc6ae63, fallback);
+  const rifle = new THREE.Group();
+  rifle.position.set(0.3, 0.98, -0.12);
+  group.add(rifle);
+  let rifleReady = false;
+  let selectedWeapon = 'rifle';
+  const updateWeapon = (weapon) => {
+    selectedWeapon = weapon;
+    rifle.visible = rifleReady && weapon === 'rifle';
+    fallback.visible = !rifle.visible;
+  };
+  const releaseRifle = assets.mountRifle(rifle, {
+    onReady() {
+      rifleReady = true;
+      updateWeapon(selectedWeapon);
+    },
+  });
   const shield = new THREE.Mesh(
     new THREE.SphereGeometry(1.18, 16, 10),
     new THREE.MeshBasicMaterial({
@@ -31,16 +49,39 @@ export function makeGunner(world, slot) {
   shield.position.y = 0.95;
   group.add(shield);
   world.scene.add(group);
-  return { group, legs, shield };
+  return {
+    group,
+    legs,
+    shield,
+    updateWeapon,
+    dispose() {
+      releaseRifle();
+      group.removeFromParent();
+      shield.geometry.dispose();
+      shield.material.dispose();
+    },
+  };
 }
-export function makeViewWeapon(world) {
+export function makeViewWeapon(world, assets) {
   const group = new THREE.Group(),
     rifle = new THREE.Group(),
     grenade = new THREE.Group();
   group.add(rifle, grenade);
-  world.camera.add(group);
+  world.viewScene.add(group);
+  const rifleFallback = new THREE.Group();
+  const rifleHands = new THREE.Group();
+  rifle.add(rifleFallback, rifleHands);
   const b = (parent, x, y, z, w, h, d, c) => {
-    const m = world.box(x, y, z, w, h, d, c, parent);
+    const m = world.box(
+      x,
+      y,
+      z,
+      w,
+      h,
+      d,
+      c,
+      parent === rifle ? rifleFallback : parent,
+    );
     m.castShadow = false;
     m.receiveShadow = false;
     m.renderOrder = 10;
@@ -60,8 +101,9 @@ export function makeViewWeapon(world) {
       b(rifle, s * 0.102, 0.04, z, 0.025, 0.13, 0.025, 0x141f25);
     b(rifle, s * 0.11, -0.025, -0.29, 0.025, 0.055, 0.055, 0xc8c4a9);
   }
-  b(rifle, 0.03, -0.25, 0.04, 0.16, 0.3, 0.18, 0x2b809d).rotation.x = -0.5;
-  b(rifle, -0.17, -0.16, -0.58, 0.17, 0.19, 0.24, 0xc6a37e).rotation.z = -0.55;
+  b(rifleHands, 0.03, -0.25, 0.04, 0.16, 0.3, 0.18, 0x2b809d).rotation.x = -0.5;
+  b(rifleHands, -0.17, -0.16, -0.58, 0.17, 0.19, 0.24, 0xc6a37e).rotation.z =
+    -0.55;
   b(grenade, 0, 0, -0.38, 0.28, 0.28, 0.6, 0x566047);
   b(grenade, 0, 0.15, -0.43, 0.32, 0.08, 0.36, 0xcb9e44);
   b(grenade, 0, -0.2, -0.18, 0.14, 0.27, 0.19, 0x25383f);
@@ -90,5 +132,11 @@ export function makeViewWeapon(world) {
   group.add(flash);
   flash.visible = false;
   group.position.set(0.32, -0.3, -0.18);
+  assets.mountRifle(rifle, {
+    firstPerson: true,
+    onReady() {
+      rifleFallback.visible = false;
+    },
+  });
   return { group, rifle, grenade, drum, flash };
 }

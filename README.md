@@ -10,6 +10,8 @@ Le [catalogue de production](assets/ASSET_PRODUCTION.md) contient la liste des 2
 
 Déposer chaque modèle et son PNG de HUD dans [assets/incoming/](assets/incoming/), avec le même nom de base, par exemple `weapon_assault_rifle.glb` et `weapon_assault_rifle.png`. Sur le poste de développement actuel, le raccourci `Documents/hotshot/assets` conserve l'accès au même dossier.
 
+**Fusil d’assaut intégré** : le GLB et le PNG livrés sous le nom `weapon_assault_rifle_3q_v2` sont servis depuis `public/assets/weapons/`. Le modèle texturé remplace le fusil procédural en vue FPS et chez l’adversaire ; le PNG apparaît avec les munitions du fusil. La livraison est conservée sans conversion (29 829 triangles, GLB de 19,4 Mo, textures intégrées 2 048/4 096 px). L’orientation est corrigée vers -Z et la longueur normalisée à 1,05 m au chargement. Le modèle se télécharge une seule fois par partie ouverte, avec un modèle procédural pendant le chargement ou en cas d’échec. Le recul et le rechargement animent l’arme entière, car cette livraison est un seul mesh sans animations séparées.
+
 ## Jouer en développement
 
 Node.js 22.13+ (vérifié avec Node 24).
@@ -63,7 +65,7 @@ L’entraînement se met en pause avec le menu. Un duel réseau continue. La pro
 - Fusil 18 dégâts / 600 RPM / 30 cartouches / rechargement 1,8 s ; rafale plus précise à dégâts ×1,1.
 - Lance-grenades : quatre grenades, rebonds, mèche de 2,2 s, détonation à distance des grenades du propriétaire, dégâts de zone avec obstacles, dégâts personnels et knockback.
 - Combat Roll, saut, contrôle aérien, glissade et accroupissement. Après un kill, 50 % du chargeur du fusil est restauré. Réserve de munitions illimitée pour ce prototype.
-- Arène à deux niveaux, deux rampes, chemins latéraux et couvertures. Géométrie greybox industrielle ; armes et Gunner procéduraux.
+- Arène à deux niveaux, deux rampes, chemins latéraux et couvertures. Géométrie greybox industrielle ; Gunner et lance-grenades procéduraux, fusil d’assaut en GLB texturé.
 - Course à dix éliminations, huit minutes, prolongation au prochain kill si égalité ; revanche après accord des deux joueurs.
 - HUD, hitmarkers, petits nombres de dégâts, kill feed, flash, recul, animations mécaniques simples, sons synthétisés.
 - Entraînement avec bot utilisant les mêmes règles ; création/rejoindre un duel via code.
@@ -78,6 +80,7 @@ Brute, Runner, pickups, armure, Overdrive, Hotshot, interactions environnemental
 - `server/index.js` : rooms WebSocket, validation des entrées, limites de débit et snapshots.
 - `client/engine.js` : contrôles, prédiction de mouvement, réconciliation, interpolation des adversaires, feedback prédit.
 - `client/scene.js`, `models.js`, `effects.js`, `audio.js` : présentation Three.js et audio.
+- `client/weapon-assets.js` : chargement partagé du GLB, orientation, échelle et libération des ressources ; la vue FPS utilise une passe de profondeur séparée.
 - `app/` : interface React du navigateur.
 
 Le serveur simule à 60 Hz et émet à 20 Hz. Le client transmet uniquement les entrées ; il ne choisit ni sa position, ni ses dégâts, ni son score. Les entrées sont bornées et la file d’attente limitée, sans ticks supplémentaires achetables par envoi massif. La réconciliation rejoue les commandes non acquittées. Les hitscan utilisent un historique serveur limité à 200 ms, calculé à partir du RTT mesuré côté serveur, et n’atteignent jamais une vie précédente. Les couvertures sont statiques.

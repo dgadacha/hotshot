@@ -18,7 +18,7 @@ export function createScene(container) {
   });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.25;
@@ -26,6 +26,14 @@ export function createScene(container) {
   const camera = new THREE.PerspectiveCamera(83, 1, 0.06, 160);
   camera.rotation.order = 'YXZ';
   scene.add(camera);
+  // A separate depth pass keeps the view weapon out of walls while preserving
+  // depth between its own textured surfaces (the GLB is double-sided).
+  const viewScene = new THREE.Scene();
+  const viewCamera = new THREE.PerspectiveCamera(65, 1, 0.02, 5);
+  viewScene.add(new THREE.HemisphereLight(0xc8e6ef, 0x66604e, 2.6));
+  const weaponLight = new THREE.DirectionalLight(0xffe2aa, 3.4);
+  weaponLight.position.set(-2, 4, 2);
+  viewScene.add(weaponLight);
   scene.add(new THREE.HemisphereLight(0xc8e6ef, 0x66604e, 2.6));
   const sun = new THREE.DirectionalLight(0xffe2aa, 3.4);
   sun.position.set(-16, 38, 14);
@@ -212,6 +220,8 @@ export function createScene(container) {
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    viewCamera.aspect = camera.aspect;
+    viewCamera.updateProjectionMatrix();
   }
   const observer = new ResizeObserver(resize);
   observer.observe(container);
@@ -219,9 +229,17 @@ export function createScene(container) {
   return {
     scene,
     camera,
+    viewScene,
     renderer,
     box,
     mat,
+    renderGame() {
+      renderer.render(scene, camera);
+      renderer.autoClear = false;
+      renderer.clearDepth();
+      renderer.render(viewScene, viewCamera);
+      renderer.autoClear = true;
+    },
     lobby(t) {
       camera.position.set(14 + Math.sin(t * 0.07) * 3, 9.5, 17);
       camera.lookAt(-3, 2, -6);
@@ -230,7 +248,7 @@ export function createScene(container) {
     dispose() {
       observer.disconnect();
       renderer.setAnimationLoop(null);
-      scene.traverse((o) => {
+      const disposeObject = (o) => {
         o.geometry?.dispose();
         if (o.material) {
           for (const m of Array.isArray(o.material)
@@ -240,7 +258,9 @@ export function createScene(container) {
             m.dispose();
           }
         }
-      });
+      };
+      scene.traverse(disposeObject);
+      viewScene.traverse(disposeObject);
       renderer.dispose();
       renderer.domElement.remove();
     },

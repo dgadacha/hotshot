@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import {
   ArrowUpRight,
   Crosshair,
@@ -14,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import type { Game } from '../client/engine.js';
 import { registerGameTools } from '../client/webmcp.js';
+import { RIFLE_HUD_URL } from '../client/asset-paths.js';
 
 type HUD = {
   hp: number;
@@ -348,6 +350,17 @@ export default function Home() {
               </div>
             </div>
             <div className="ammo-panel">
+              {hud.weaponKey === 'rifle' && (
+                <Image
+                  className="weapon-hud-image"
+                  src={RIFLE_HUD_URL}
+                  alt=""
+                  width={180}
+                  height={120}
+                  draggable={false}
+                  unoptimized
+                />
+              )}
               <span>{hud.weapon}</span>
               <div>
                 <strong>{hud.ammo.toString().padStart(2, '0')}</strong>

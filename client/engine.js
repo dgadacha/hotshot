@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { createScene } from './scene.js';
 import { makeGunner, makeViewWeapon } from './models.js';
+import { createWeaponAssets } from './weapon-assets.js';
 import { AudioEngine } from './audio.js';
 import { Effects } from './effects.js';
 import { GUNNER, WEAPONS } from '../shared/config.js';
@@ -19,16 +20,9 @@ export class Game {
     this.world = createScene(container);
     this.audio = new AudioEngine();
     this.effects = new Effects(this.world);
-    this.gun = makeViewWeapon(this.world);
+    this.weaponAssets = createWeaponAssets();
+    this.gun = makeViewWeapon(this.world, this.weaponAssets);
     this.gun.group.visible = false;
-    this.gun.group.traverse((o) => {
-      if (o.isMesh) {
-        o.material = o.material.clone();
-        o.material.depthTest = false;
-        o.material.depthWrite = false;
-        o.renderOrder = 10;
-      }
-    });
     this.mode = 'menu';
     this.keys = new Set();
     this.edges = {};
@@ -328,9 +322,7 @@ export class Game {
     this.room = '';
     this.gun.group.visible = false;
     for (const object of this.remote.values()) {
-      this.world.scene.remove(object.group);
-      object.shield.geometry.dispose();
-      object.shield.material.dispose();
+      object.dispose();
     }
     this.remote.clear();
     for (const mesh of this.projectiles.values()) {
@@ -364,6 +356,7 @@ export class Game {
           self: p.id === this.id,
         })) ?? [],
       weapon: this.local?.weapon ?? null,
+      rifleAsset: this.weaponAssets.status,
     };
   }
   setMuted(muted) {
@@ -626,10 +619,15 @@ export class Game {
     this.gun.rifle.visible = p.weapon === 'rifle';
     this.gun.grenade.visible = p.weapon === 'grenade';
     this.gun.flash.visible = this.flash > 0;
+    this.gun.flash.position.set(
+      p.weapon === 'rifle' ? -0.012 : 0,
+      p.weapon === 'rifle' ? 0.064 : 0,
+      p.weapon === 'rifle' ? -1.21 : -1.23,
+    );
     this.gun.flash.rotation.z = now * 40;
     this.gun.flash.scale.setScalar(0.8 + Math.random() * 0.3);
     this.gun.drum.rotation.x += this.kick * dt * 3;
-    this.world.renderer.render(this.world.scene, camera);
+    this.world.renderGame();
     this.hudTime += dt;
     if (this.hudTime > 0.05) {
       this.hudTime = 0;
@@ -654,7 +652,7 @@ export class Game {
       ids.add(p.id);
       let model = this.remote.get(p.id);
       if (!model) {
-        model = makeGunner(this.world, 1);
+        model = makeGunner(this.world, 1, this.weaponAssets);
         this.remote.set(p.id, model);
       }
       const old =
@@ -672,6 +670,7 @@ export class Game {
       model.group.visible = p.hp > 0;
       model.group.scale.y = p.crouching ? 0.63 : 1;
       model.shield.visible = p.protected > 0;
+      model.updateWeapon(p.weapon);
       const speed = Math.hypot(p.vx, p.vz);
       model.legs.forEach(
         (leg, i) =>
@@ -681,9 +680,7 @@ export class Game {
     }
     for (const [id, m] of this.remote)
       if (!ids.has(id)) {
-        this.world.scene.remove(m.group);
-        m.shield.geometry.dispose();
-        m.shield.material.dispose();
+        m.dispose();
         this.remote.delete(id);
       }
   }
@@ -750,6 +747,7 @@ export class Game {
     this.abort.abort();
     this.audio.dispose();
     this.effects.dispose();
+    this.weaponAssets.dispose();
     this.world.dispose();
   }
 }
