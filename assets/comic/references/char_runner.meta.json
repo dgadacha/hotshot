@@ -1,0 +1,53 @@
+{
+  "id": "char_runner",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-0248ddf6-00d6-42d2-a5dd-06ebaedcb9c2.png",
+  "referenceSize": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    64,
+    24,
+    980,
+    1498
+  ],
+  "marginFractionsLTRB": [
+    0.0625,
+    0.015625,
+    0.04296875,
+    0.024739583333333332
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete unarmed adult athletic female, slender build clearly distinct from Gunner and Brute; hands apart from torso.",
+    "Undershirt leaves midriff visible despite prompt asking torso coverage. Some soft skin shading.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    184,
+    27,
+    848,
+    1492
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.1796875,
+    0.017578125,
+    0.171875,
+    0.028645833333333332
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.7326030731201172,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

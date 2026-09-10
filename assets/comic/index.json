@@ -1,0 +1,1566 @@
+{
+  "version": 2,
+  "artDirection": "HOTSHOT ultra-colorful flat comic MeshToon",
+  "generationTool": "image_gen_builtin",
+  "requested": 26,
+  "generated": 26,
+  "assets": [
+    {
+      "id": "weapon_assault_rifle",
+      "label": "Assault Rifle",
+      "lot": "A",
+      "glb": "weapon_assault_rifle.glb",
+      "hudPng": "weapon_assault_rifle.png",
+      "targetSize": "1,05 m de long",
+      "status": "generated",
+      "reference": "references/weapon_assault_rifle_comic_v1.png",
+      "prompt": "prompts/weapon_assault_rifle.txt",
+      "referenceSize": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        30,
+        45,
+        1743,
+        871
+      ],
+      "qaNotes": [
+        "Full asset visible with genuine alpha; clean bold comic palette and largely flat facets.",
+        "Requested 12% margins NOT met: output is tightly cropped.",
+        "Some narrow glossy bevel highlights and limited soft shading remain, though no rust or gritty microtexture."
+      ],
+      "visualQA": "reviewed_with_limitations",
+      "opaqueAlphaBBox": [
+        35,
+        48,
+        1739,
+        836
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.019729425028184894,
+        0.05411499436302142,
+        0.019729425028184894,
+        0.05749718151071026
+      ],
+      "marginFractionsLTRB": [
+        0.016910935738444193,
+        0.05073280721533258,
+        0.017474633596392335,
+        0.018038331454340473
+      ],
+      "marginRequirementMet": false,
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.6309234349599437,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "575c3988355c8e665279f43e507175fb3d265887646f7c17c36527b364d0d0b2"
+    },
+    {
+      "id": "char_gunner",
+      "label": "Gunner",
+      "lot": "A",
+      "glb": "char_gunner.glb",
+      "hudPng": "char_gunner.png",
+      "targetSize": "1,85 m de haut",
+      "status": "generated",
+      "reference": "references/char_gunner_comic_v1.png",
+      "prompt": "prompts/char_gunner.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        49,
+        40,
+        981,
+        1490
+      ],
+      "marginFractionsLTRB": [
+        0.0478515625,
+        0.026041666666666668,
+        0.0419921875,
+        0.029947916666666668
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Adult massive full-body character, hands empty and separated from torso; clear clean comic colors and purple shadow facets.",
+        "A-pose is narrower than the specified 35 degrees. Some residual soft tonal shifts on skin.",
+        "The displayed RGB preview has colored haze, but inspected background pixels have alpha 0.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        55,
+        73,
+        978,
+        1487
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.0537109375,
+        0.047526041666666664,
+        0.044921875,
+        0.031901041666666664
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5410353342692057,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "5cd978a0982427a4a817a479fb41fefa22e66afea538ce5b2ef9b528cdd4ddc4"
+    },
+    {
+      "id": "weapon_grenade_launcher",
+      "label": "Grenade Launcher",
+      "lot": "A",
+      "glb": "weapon_grenade_launcher.glb",
+      "hudPng": "weapon_grenade_launcher.png",
+      "targetSize": "0,85 m de long",
+      "status": "generated",
+      "reference": "references/weapon_grenade_launcher_comic_v1.png",
+      "prompt": "prompts/weapon_grenade_launcher.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        9,
+        1491,
+        1000
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.0087890625,
+        0.029296875,
+        0.0234375
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Full single weapon visible, broad cylindrical launcher silhouette and clean comic palette.",
+        "Drum appears to have more than four chambers.",
+        "Minor glossy bevel highlights/soft shifts remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        50,
+        74,
+        1483,
+        884
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.032552083333333336,
+        0.072265625,
+        0.034505208333333336,
+        0.13671875
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5406087239583334,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "69e2e43375e805b6ce60207aa5837996dff13486dcac3c60835878c28bdbec82"
+    },
+    {
+      "id": "projectile_grenade",
+      "label": "Grenade",
+      "lot": "A",
+      "glb": "projectile_grenade.glb",
+      "hudPng": "projectile_grenade.png",
+      "targetSize": "0,28 m de diamètre",
+      "status": "generated",
+      "reference": "references/projectile_grenade_comic_v1.png",
+      "prompt": "prompts/projectile_grenade.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        56,
+        1523,
+        960
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.0546875,
+        0.008463541666666666,
+        0.0625
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Full single rounded canister visible with chunky ribs and violet end rings.",
+        "Two coral indicators appear rather than requested single indicator; some slight soft shading.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        149,
+        59,
+        1398,
+        957
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.09700520833333333,
+        0.0576171875,
+        0.08984375,
+        0.0654296875
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.48568979899088544,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "9390f9eba2731ab48bd8ab0b3c76be7171fffde774945909834a1d29b2f6e476"
+    },
+    {
+      "id": "arms_gunner",
+      "label": "Bras FPS du Gunner",
+      "lot": "A",
+      "glb": "arms_gunner.glb",
+      "hudPng": "arms_gunner.png",
+      "targetSize": "Avant-bras d’environ 0,40 m",
+      "status": "generated",
+      "reference": "references/arms_gunner_comic_v1.png",
+      "prompt": "prompts/arms_gunner.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        75,
+        21,
+        1461,
+        1000
+      ],
+      "marginFractionsLTRB": [
+        0.048828125,
+        0.0205078125,
+        0.048828125,
+        0.0234375
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Both matching muscular adult forearms fully visible, separated hands with five digits each, no weapon or gore.",
+        "Clean comic outlines; slight soft tonal shifts on skin and gloves.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        78,
+        92,
+        1458,
+        936
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.05078125,
+        0.08984375,
+        0.05078125,
+        0.0859375
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.6722151438395182,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "158809c78bedf17a1b1c95f6dfbc5adab389d99405e04b1043762e7cc92ea1f9"
+    },
+    {
+      "id": "env_container",
+      "label": "Container de couverture",
+      "lot": "B",
+      "glb": "env_container.glb",
+      "hudPng": "env_container.png",
+      "targetSize": "6 × 3 × 3,20 m (L × P × H)",
+      "status": "generated",
+      "reference": "references/env_container_comic_v1.png",
+      "prompt": "prompts/env_container.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        3,
+        1463,
+        994
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.0029296875,
+        0.047526041666666664,
+        0.029296875
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Entire coherent container with closed twin doors, long corrugated side and roof. Clean flat saturated palette.",
+        "Thin highlights and slight soft shifts remain; requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        108,
+        39,
+        1434,
+        991
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.0703125,
+        0.0380859375,
+        0.06640625,
+        0.0322265625
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.40292104085286456,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "1884c7fdc806bbd83858e775dcf32f1c0d55d2b8ca5179fc3fe789f1eee9d418"
+    },
+    {
+      "id": "env_crate",
+      "label": "Caisse de couverture",
+      "lot": "B",
+      "glb": "env_crate.glb",
+      "hudPng": "env_crate.png",
+      "targetSize": "3 × 3 × 2 m",
+      "status": "generated",
+      "reference": "references/env_crate_comic_v1.png",
+      "prompt": "prompts/env_crate.txt",
+      "referenceSize": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        82,
+        32,
+        1287,
+        1134
+      ],
+      "marginFractionsLTRB": [
+        0.05967976710334789,
+        0.02794759825327511,
+        0.06331877729257641,
+        0.00960698689956332
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Entire clean bright pink crate, broad cyan band and yellow bolts, no grain or rust.",
+        "Silhouette looks more cubic than requested low 3x3x2 volume. Requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        103,
+        41,
+        1281,
+        1132
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.07496360989810771,
+        0.03580786026200873,
+        0.06768558951965066,
+        0.011353711790393014
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.38788797569331884,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "4eac9b2f57fdf07338fca8f16e94e63e4810ca1ff3f76ccdf90ff4d55551b0c9"
+    },
+    {
+      "id": "env_press",
+      "label": "Presse industrielle centrale",
+      "lot": "B",
+      "glb": "env_press.glb",
+      "hudPng": "env_press.png",
+      "targetSize": "2,20 × 5,50 × 2,20 m",
+      "status": "generated",
+      "reference": "references/env_press_comic_v1.png",
+      "prompt": "prompts/env_press.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        30,
+        35,
+        1507,
+        992
+      ],
+      "marginFractionsLTRB": [
+        0.01953125,
+        0.0341796875,
+        0.018880208333333332,
+        0.03125
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Entire single press, vivid palette, no readable numbers on pressure gauge.",
+        "Four visible piston columns rather than two requested enclosed side pistons. Minor soft shading remains. Requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        34,
+        38,
+        1504,
+        989
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.022135416666666668,
+        0.037109375,
+        0.020833333333333332,
+        0.0341796875
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.3752644856770833,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "3e5d1592b386166d6551e3f2007d9e7509d27628ad81586384784570a3d67174"
+    },
+    {
+      "id": "env_pipe_elbow",
+      "label": "Coude de tuyau",
+      "lot": "B",
+      "glb": "env_pipe_elbow.glb",
+      "hudPng": "env_pipe_elbow.png",
+      "targetSize": "Diamètre extérieur 0,70 m",
+      "status": "generated",
+      "reference": "references/env_pipe_elbow_comic_v1.png",
+      "prompt": "prompts/env_pipe_elbow.txt",
+      "referenceSize": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        21,
+        1338,
+        1145
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.01834061135371179,
+        0.026200873362445413,
+        0.0
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Entire elbow with both open ends and six large bolts on each flange, clean saturated palette.",
+        "Some additional hue steps and soft shading remain; requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        108,
+        67,
+        1296,
+        1081
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.07860262008733625,
+        0.05851528384279476,
+        0.056768558951965066,
+        0.05589519650655022
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5862594789064536,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "9c981766913a4ff00b9ba747af623f3da0b8ad236c21842c7528046221ec2407"
+    },
+    {
+      "id": "env_fan",
+      "label": "Ventilateur industriel",
+      "lot": "B",
+      "glb": "env_fan.glb",
+      "hudPng": "env_fan.png",
+      "targetSize": "2,50 × 0,70 × 2,50 m",
+      "status": "generated",
+      "reference": "references/env_fan_comic_v1.png",
+      "prompt": "prompts/env_fan.txt",
+      "referenceSize": [
+        1304,
+        1206
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        140,
+        60,
+        1225,
+        1148
+      ],
+      "marginFractionsLTRB": [
+        0.10736196319018405,
+        0.04975124378109453,
+        0.06058282208588957,
+        0.04809286898839138
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete square fan with exactly four clear stationary blades, attached thick grille and readable frame depth.",
+        "Some highlights and extra gray tones on fasteners remain; requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        143,
+        63,
+        1222,
+        1144
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.10966257668711657,
+        0.05223880597014925,
+        0.06288343558282208,
+        0.05140961857379768
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.38410897964166896,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "8065895dc148b25e573c38d623176a2d2182192b34ac03213f1369efaf81dddd"
+    },
+    {
+      "id": "env_gantry_crane",
+      "label": "Grue portique",
+      "lot": "B",
+      "glb": "env_gantry_crane.glb",
+      "hudPng": "env_gantry_crane.png",
+      "targetSize": "42 m de portée × 20 m de haut",
+      "status": "generated",
+      "reference": "references/env_gantry_crane_comic_v1.png",
+      "prompt": "prompts/env_gantry_crane.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        43,
+        25,
+        1504,
+        1002
+      ],
+      "marginFractionsLTRB": [
+        0.027994791666666668,
+        0.0244140625,
+        0.020833333333333332,
+        0.021484375
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Entire coherent crane, all four feet and full top beam visible, central hook connected.",
+        "View is closer to level than slightly elevated; extra railing on trolley. Requested 12% margins not met."
+      ],
+      "opaqueAlphaBBox": [
+        48,
+        48,
+        1492,
+        942
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.03125,
+        0.046875,
+        0.028645833333333332,
+        0.080078125
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.6193930308024088,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "184c3bb47b862a6a403021fa55e87f3ab3fb8f534ba9eed0419e2ecbe2fcf58b"
+    },
+    {
+      "id": "env_scrap_pile",
+      "label": "Tas de ferraille",
+      "lot": "B",
+      "glb": "env_scrap_pile.glb",
+      "hudPng": "env_scrap_pile.png",
+      "targetSize": "3 × 2 × 1,50 m",
+      "status": "generated",
+      "reference": "references/env_scrap_pile_comic_v1.png",
+      "prompt": "prompts/env_scrap_pile.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        79,
+        17,
+        1488,
+        1024
+      ],
+      "marginFractionsLTRB": [
+        0.051432291666666664,
+        0.0166015625,
+        0.03125,
+        0.0
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete single coherent pile with gear, pipe, motor casing and broad bent plates, all touching.",
+        "A few glossy highlights and soft color changes remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        84,
+        108,
+        1453,
+        931
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.0546875,
+        0.10546875,
+        0.054036458333333336,
+        0.0908203125
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5288225809733073,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "f4344daaf2df131ec613f43ac22679659ab123ca4c674702a88b0184808a94e5"
+    },
+    {
+      "id": "char_brute",
+      "label": "Brute",
+      "lot": "C",
+      "glb": "char_brute.glb",
+      "hudPng": "char_brute.png",
+      "targetSize": "2,10 m de haut — silhouette très large",
+      "status": "generated",
+      "reference": "references/char_brute_comic_v1.png",
+      "prompt": "prompts/char_brute.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        117,
+        1012,
+        1508
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.076171875,
+        0.01171875,
+        0.018229166666666668
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete unarmed adult very broad Brute, massive forearms and tiny legs, hands separate from torso, no extra prop.",
+        "Arm angle is narrower than requested 35-degree A-pose; hands/fingers are relaxed and partly curled.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        16,
+        125,
+        1009,
+        1436
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.015625,
+        0.08138020833333333,
+        0.0146484375,
+        0.06510416666666667
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4769401550292969,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "42d5ddb859ab104bbad5a2e065a9fedc3d5c34d912819476c95847333d48fc54"
+    },
+    {
+      "id": "weapon_boomstick",
+      "label": "Boomstick",
+      "lot": "C",
+      "glb": "weapon_boomstick.glb",
+      "hudPng": "weapon_boomstick.png",
+      "targetSize": "1,15 m de long",
+      "status": "generated",
+      "reference": "references/weapon_boomstick_comic_v1.png",
+      "prompt": "prompts/weapon_boomstick.txt",
+      "referenceSize": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        21,
+        9,
+        1762,
+        871
+      ],
+      "marginFractionsLTRB": [
+        0.011837655016910935,
+        0.010146561443066516,
+        0.006764374295377677,
+        0.018038331454340473
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete single oversized shotgun, two side-by-side bores, strong heavy silhouette.",
+        "Some extra smooth tonal shading and glossy bevels remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        26,
+        120,
+        1748,
+        706
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.014656144306651634,
+        0.13528748590755355,
+        0.014656144306651634,
+        0.2040586245772266
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5804403833908047,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "dee03df41688450fc0ab3078c398192d5285043241e8e12c4c51be0d4e8f8c31"
+    },
+    {
+      "id": "weapon_knuckle_cannon",
+      "label": "Knuckle Cannon",
+      "lot": "C",
+      "glb": "weapon_knuckle_cannon.glb",
+      "hudPng": "weapon_knuckle_cannon.png",
+      "targetSize": "0,95 m de long",
+      "status": "generated",
+      "reference": "references/weapon_knuckle_cannon_comic_v1.png",
+      "prompt": "prompts/weapon_knuckle_cannon.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        47,
+        41,
+        1495,
+        970
+      ],
+      "marginFractionsLTRB": [
+        0.030598958333333332,
+        0.0400390625,
+        0.026692708333333332,
+        0.052734375
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete connected heavy cannon with four muzzle lobes and large pink rear tank; no numbers on gauge.",
+        "Piston shafts use silver-white highlights, more reflective than strict matte aplats.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        52,
+        44,
+        1492,
+        924
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.033854166666666664,
+        0.04296875,
+        0.028645833333333332,
+        0.09765625
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4927285512288411,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "94339b626fc5ed9e5772442f37bb5f4d8cc26ff79d16c3a68baaea2e5d5567b0"
+    },
+    {
+      "id": "projectile_knuckle",
+      "label": "Projectile du Knuckle Cannon",
+      "lot": "C",
+      "glb": "projectile_knuckle.glb",
+      "hudPng": "projectile_knuckle.png",
+      "targetSize": "0,45 m de diamètre",
+      "status": "generated",
+      "reference": "references/projectile_knuckle_comic_v1.png",
+      "prompt": "prompts/projectile_knuckle.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        111,
+        72,
+        1376,
+        968
+      ],
+      "marginFractionsLTRB": [
+        0.072265625,
+        0.0703125,
+        0.10416666666666667,
+        0.0546875
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete single slug, four-lobed cap and one cyan side indicator, no effects or loose pieces.",
+        "Front shadow shifts toward warm tan instead of requested violet; some soft tonal shading.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        169,
+        75,
+        1372,
+        929
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.11002604166666667,
+        0.0732421875,
+        0.10677083333333333,
+        0.0927734375
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.5441474914550781,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "0c8c114a942b96d2671082a0a5c6115a595d384a9d08cab20bf1cc1ed2db16da"
+    },
+    {
+      "id": "char_runner",
+      "label": "Runner",
+      "lot": "C",
+      "glb": "char_runner.glb",
+      "hudPng": "char_runner.png",
+      "targetSize": "1,70 m de haut — silhouette fine",
+      "status": "generated",
+      "reference": "references/char_runner_comic_v1.png",
+      "prompt": "prompts/char_runner.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        64,
+        24,
+        980,
+        1498
+      ],
+      "marginFractionsLTRB": [
+        0.0625,
+        0.015625,
+        0.04296875,
+        0.024739583333333332
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete unarmed adult athletic female, slender build clearly distinct from Gunner and Brute; hands apart from torso.",
+        "Undershirt leaves midriff visible despite prompt asking torso coverage. Some soft skin shading.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        184,
+        27,
+        848,
+        1492
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.1796875,
+        0.017578125,
+        0.171875,
+        0.028645833333333332
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.7326030731201172,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "8ccffeb9346e06d5454e737b135dc27acf881a8beaba4c8ad55581caf59236f5"
+    },
+    {
+      "id": "weapon_smg",
+      "label": "SMG",
+      "lot": "C",
+      "glb": "weapon_smg.glb",
+      "hudPng": "weapon_smg.png",
+      "targetSize": "0,65 m de long",
+      "status": "generated",
+      "reference": "references/weapon_smg_comic_v1.png",
+      "prompt": "prompts/weapon_smg.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        55,
+        1522,
+        998
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.0537109375,
+        0.009114583333333334,
+        0.025390625
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete standalone compact SMG with straight inserted magazine and short perforated barrel.",
+        "Minor soft shading and silver spring highlights remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        67,
+        73,
+        1491,
+        947
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.043619791666666664,
+        0.0712890625,
+        0.029296875,
+        0.0751953125
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.6772937774658203,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "0e9601e50bd6641b0d67bbdcac1f1352508f6030a4a57f446531c5a47e37cfae"
+    },
+    {
+      "id": "weapon_sawed_off",
+      "label": "Sawed-Off",
+      "lot": "C",
+      "glb": "weapon_sawed_off.glb",
+      "hudPng": "weapon_sawed_off.png",
+      "targetSize": "0,48 m de long",
+      "status": "generated",
+      "reference": "references/weapon_sawed_off_comic_v1.png",
+      "prompt": "prompts/weapon_sawed_off.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        69,
+        135,
+        1503,
+        998
+      ],
+      "marginFractionsLTRB": [
+        0.044921875,
+        0.1318359375,
+        0.021484375,
+        0.025390625
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete standalone compact double-barrel weapon, both bores visible, no shoulder stock.",
+        "Barrels look relatively long for a sawed-off; some soft tonal changes remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        75,
+        196,
+        1500,
+        784
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.048828125,
+        0.19140625,
+        0.0234375,
+        0.234375
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.689910888671875,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "5b8469b3f674cd8aa5ce817fdaeda1ccd3889a65da0af279480e10ee0dc47e8d"
+    },
+    {
+      "id": "pickup_health_small",
+      "label": "Small Health",
+      "lot": "D",
+      "glb": "pickup_health_small.glb",
+      "hudPng": "pickup_health_small.png",
+      "targetSize": "0,45 × 0,30 × 0,35 m",
+      "status": "generated",
+      "reference": "references/pickup_health_small_comic_v1.png",
+      "prompt": "prompts/pickup_health_small.txt",
+      "referenceSize": [
+        1470,
+        1070
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        74,
+        37,
+        1442,
+        1038
+      ],
+      "marginFractionsLTRB": [
+        0.050340136054421766,
+        0.03457943925233645,
+        0.01904761904761905,
+        0.029906542056074768
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete compact medical case, two latches, raised acid-green plus, acid-green and white health colors.",
+        "Small smooth tonal changes remain beyond pure flat fills.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        171,
+        40,
+        1300,
+        1027
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.11632653061224489,
+        0.037383177570093455,
+        0.11564625850340136,
+        0.04018691588785047
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4600317884163011,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "2bbec48e3c4905d25c4a1778b519f1426d0669adf752c14c8004a4210890dbbc"
+    },
+    {
+      "id": "pickup_health_mega",
+      "label": "Mega Health",
+      "lot": "D",
+      "glb": "pickup_health_mega.glb",
+      "hudPng": "pickup_health_mega.png",
+      "targetSize": "0,65 × 0,45 × 0,80 m",
+      "status": "generated",
+      "reference": "references/pickup_health_mega_comic_v1.png",
+      "prompt": "prompts/pickup_health_mega.txt",
+      "referenceSize": [
+        1145,
+        1374
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        61,
+        1095,
+        1311
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.04439592430858806,
+        0.043668122270742356,
+        0.04585152838427948
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete upright medical canister with two integrated handles, raised green plus and acid-green/white scheme.",
+        "More than three tonal steps appear in some rounded fittings.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        118,
+        65,
+        1029,
+        1300
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.10305676855895196,
+        0.04730713245997089,
+        0.10131004366812227,
+        0.053857350800582245
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4309217342664455,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "915b51a261a15b597cf2f38631ced4ada73522a3acdeaf2fac7b8b91cbde2637"
+    },
+    {
+      "id": "pickup_armor",
+      "label": "Armor",
+      "lot": "D",
+      "glb": "pickup_armor.glb",
+      "hudPng": "pickup_armor.png",
+      "targetSize": "0,70 m de haut",
+      "status": "generated",
+      "reference": "references/pickup_armor_comic_v1.png",
+      "prompt": "prompts/pickup_armor.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        31,
+        87,
+        1292,
+        1199
+      ],
+      "marginFractionsLTRB": [
+        0.023628048780487805,
+        0.0725604670558799,
+        0.01524390243902439,
+        0.0
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete standalone layered cyan chest armor, three yellow fasteners, purple outer rim and pink inset.",
+        "Shoulder extensions add detail beyond a simple shield-like plate; some extra tonal steps.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        173,
+        90,
+        1140,
+        1107
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.13185975609756098,
+        0.0750625521267723,
+        0.13109756097560976,
+        0.07673060884070058
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.58516878903151,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "ac39fcd3e70f5330a1b786583fbbc0e9dbf93d056e7da6b743355dbd3fc5541f"
+    },
+    {
+      "id": "pickup_overdrive",
+      "label": "Overdrive Canister",
+      "lot": "D",
+      "glb": "pickup_overdrive.glb",
+      "hudPng": "pickup_overdrive.png",
+      "targetSize": "0,55 m de haut",
+      "status": "generated",
+      "reference": "references/pickup_overdrive_comic_v1.png",
+      "prompt": "prompts/pickup_overdrive.txt",
+      "referenceSize": [
+        1145,
+        1374
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        23,
+        1000,
+        1348
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.016739446870451237,
+        0.12663755458515283,
+        0.018922852983988356
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete single canister with three visible cyan clamps, pink painted panel and raised yellow lightning symbol.",
+        "Silver-gray bolts and extra tonal steps remain; no exterior effects.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        153,
+        27,
+        995,
+        1345
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.13362445414847163,
+        0.019650655021834062,
+        0.13100436681222707,
+        0.021106259097525473
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4532312503575447,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "ed97f421f4cc0e31670091308191e78cc93ecc58010431d761e0ae124e138563"
+    },
+    {
+      "id": "prop_explosive_barrel",
+      "label": "Baril explosif",
+      "lot": "D",
+      "glb": "prop_explosive_barrel.glb",
+      "hudPng": "prop_explosive_barrel.png",
+      "targetSize": "0,85 m de diamètre × 1,25 m de haut",
+      "status": "generated",
+      "reference": "references/prop_explosive_barrel_comic_v1.png",
+      "prompt": "prompts/prop_explosive_barrel.txt",
+      "referenceSize": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        69,
+        1094,
+        1402
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.049215406562054205,
+        0.024955436720142603,
+        0.0
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete coral-red barrel with two yellow bands, warning triangle and one sealed top cap.",
+        "Some smooth tonal transitions remain despite flat-shading prompt.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        188,
+        78,
+        931,
+        1324
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.16755793226381463,
+        0.05563480741797432,
+        0.17023172905525846,
+        0.05563480741797432
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4710631107585039,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "60808bd83af80efdae00476da5da1eed23d0ea751f6d59a1488bcab0f973d8cc"
+    },
+    {
+      "id": "prop_hazard_button",
+      "label": "Bouton de danger",
+      "lot": "D",
+      "glb": "prop_hazard_button.glb",
+      "hudPng": "prop_hazard_button.png",
+      "targetSize": "0,45 × 0,20 × 0,60 m",
+      "status": "generated",
+      "reference": "references/prop_hazard_button_comic_v1.png",
+      "prompt": "prompts/prop_hazard_button.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        60,
+        1209,
+        1126
+      ],
+      "marginFractionsLTRB": [
+        0.0,
+        0.05004170141784821,
+        0.07850609756097561,
+        0.060884070058381985
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete single coral-red mushroom button on yellow backplate with four purple corner bolts.",
+        "Some smooth tonal changes and warm yellow shadows remain instead of exclusively violet shadows.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        152,
+        64,
+        1206,
+        1122
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.11585365853658537,
+        0.05337781484570475,
+        0.08079268292682927,
+        0.06422018348623854
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4098556469822413,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "03b21e628cf10a10bdbf0716a02677edfe8157568d0f85fd1215ef8abe3153be"
+    },
+    {
+      "id": "prop_jump_pad",
+      "label": "Jump Pad",
+      "lot": "D",
+      "glb": "prop_jump_pad.glb",
+      "hudPng": "prop_jump_pad.png",
+      "targetSize": "2,50 × 2,50 × 0,35 m",
+      "status": "generated",
+      "reference": "references/prop_jump_pad_comic_v1.png",
+      "prompt": "prompts/prop_jump_pad.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        77,
+        57,
+        1459,
+        1005
+      ],
+      "marginFractionsLTRB": [
+        0.050130208333333336,
+        0.0556640625,
+        0.050130208333333336,
+        0.0185546875
+      ],
+      "marginRequirementMet": false,
+      "visualQA": "reviewed_with_limitations",
+      "qaNotes": [
+        "Complete octagonal platform with cyan top, yellow chevrons and two attached side spring housings.",
+        "Appears to include extra pink supports beyond four requested feet. Silver bolts and some glossy highlights remain.",
+        "Requested 12% transparent margins are not met."
+      ],
+      "opaqueAlphaBBox": [
+        80,
+        112,
+        1456,
+        944
+      ],
+      "opaqueMarginFractionsLTRB": [
+        0.052083333333333336,
+        0.109375,
+        0.052083333333333336,
+        0.078125
+      ],
+      "opaqueMarginRequirementMet": false,
+      "transparentPixelFraction": 0.4748547871907552,
+      "canvasEdgeCornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "a600c6e2c9a66f01c2df2e90c5b57c0367f1e1857e8844d031c2a043f4e16630"
+    }
+  ],
+  "remaining": []
+}

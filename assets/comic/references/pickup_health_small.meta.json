@@ -1,0 +1,53 @@
+{
+  "id": "pickup_health_small",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-22e6a550-c6c8-427a-850b-21635cee6b20.png",
+  "referenceSize": [
+    1470,
+    1070
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    74,
+    37,
+    1442,
+    1038
+  ],
+  "marginFractionsLTRB": [
+    0.050340136054421766,
+    0.03457943925233645,
+    0.01904761904761905,
+    0.029906542056074768
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete compact medical case, two latches, raised acid-green plus, acid-green and white health colors.",
+    "Small smooth tonal changes remain beyond pure flat fills.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    171,
+    40,
+    1300,
+    1027
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.11632653061224489,
+    0.037383177570093455,
+    0.11564625850340136,
+    0.04018691588785047
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4600317884163011,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

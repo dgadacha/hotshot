@@ -1,0 +1,53 @@
+{
+  "id": "weapon_sawed_off",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-3e070658-503f-4190-96a8-69bf0161e1e3.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    69,
+    135,
+    1503,
+    998
+  ],
+  "marginFractionsLTRB": [
+    0.044921875,
+    0.1318359375,
+    0.021484375,
+    0.025390625
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete standalone compact double-barrel weapon, both bores visible, no shoulder stock.",
+    "Barrels look relatively long for a sawed-off; some soft tonal changes remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    75,
+    196,
+    1500,
+    784
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.048828125,
+    0.19140625,
+    0.0234375,
+    0.234375
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.689910888671875,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

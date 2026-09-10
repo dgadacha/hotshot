@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import type { Game } from '../client/engine.js';
 import { registerGameTools } from '../client/webmcp.js';
-import { RIFLE_HUD_URL } from '../client/asset-paths.js';
+import { RIFLE_HUD_URL, LAUNCHER_HUD_URL } from '../client/asset-paths.js';
 
 type HUD = {
   hp: number;
@@ -38,6 +38,8 @@ type HUD = {
   room: string;
   ping: number;
   connected: boolean;
+  comic: { text: string; tone: string; id: number } | null;
+  speedLines: boolean;
 };
 const emptyHUD: HUD = {
   hp: 150,
@@ -60,6 +62,8 @@ const emptyHUD: HUD = {
   room: '',
   ping: 0,
   connected: false,
+  comic: null,
+  speedLines: false,
 };
 export default function Home() {
   const mount = useRef<HTMLDivElement>(null);
@@ -145,20 +149,21 @@ export default function Home() {
   return (
     <main className={`hotshot ${menu ? 'in-menu' : 'in-game'}`}>
       <div ref={mount} className="viewport" aria-label="Arène 3D Scrapyard" />
-      <div className="screen-grain" />
       {menu ? (
-        <div className="lobby">
+        <div
+          className={`lobby ${view === 'home' ? 'lobby-home' : 'lobby-form'}`}
+        >
           <header className="topbar">
             <span className="edition">
-              <i /> DUEL PROTOTYPE <span>001</span>
+              COMIC EDITION <span>VOL. 02</span>
             </span>
             <span className="studio-label">
-              NO STAMINA. NO SECOND THOUGHTS.
+              DU BRUIT. DES COULEURS. UN DUEL.
             </span>
           </header>
           <section className="menu-content">
             <div className="eyebrow">
-              <span /> WELCOME TO THE SCRAPYARD
+              <span /> ENTRE DANS LA CASE.
             </div>
             <h1>
               HOT<span>SHOT</span>
@@ -177,7 +182,7 @@ export default function Home() {
                     disabled={!ready}
                     onClick={() => setView('host')}
                   >
-                    <span>HOST GAME</span>
+                    <span>CRÉER UN DUEL</span>
                     <ArrowUpRight />
                   </Button>
                   <Button
@@ -185,7 +190,7 @@ export default function Home() {
                     disabled={!ready}
                     onClick={() => setView('join')}
                   >
-                    <span>JOIN GAME</span>
+                    <span>REJOINDRE UN DUEL</span>
                     <ChevronRight />
                   </Button>
                   <Button
@@ -254,7 +259,7 @@ export default function Home() {
                     }
                     onClick={() => start(view)}
                   >
-                    {view === 'host' ? 'HOST GAME' : 'JOIN GAME'}
+                    {view === 'host' ? 'CRÉER LE DUEL' : 'REJOINDRE'}
                     <ArrowUpRight />
                   </Button>
                 </>
@@ -274,10 +279,28 @@ export default function Home() {
               <span className="hp-tag">150 HP</span>
             </div>
           </section>
+          <div className="hero-comic" aria-hidden="true">
+            <div className="hero-disc" />
+            <span className="hero-caption">ÇA VA FAIRE DU BRUIT !</span>
+            <Image
+              src="/assets/characters/char_gunner_comic.png"
+              alt=""
+              width={1024}
+              height={1536}
+              className="hero-gunner"
+              unoptimized
+              priority
+            />
+            <b className="hero-bang">
+              LET’S
+              <br />
+              ROLL!
+            </b>
+          </div>
           <aside className="map-stamp">
-            <span>THE KILLING FLOOR</span>
+            <span>PROCHAIN ÉPISODE : CHAOS TOTAL</span>
             <strong>SCRAPYARD</strong>
-            <small>INDUSTRIAL COMPLEX / ARENA 01</small>
+            <small>ARÈNE 01 / 100 % MAUVAISES IDÉES</small>
             <div className="stamp-line" />
           </aside>
           <footer className="lobby-footer">
@@ -320,6 +343,18 @@ export default function Home() {
             className="damage-vignette"
             style={{ opacity: Math.min(1, hud.hurt * 2) }}
           />
+          {!paused && hud.speedLines && (
+            <div className="speed-lines" aria-hidden="true" />
+          )}
+          {!paused && hud.hp > 0 && hud.comic && (
+            <div
+              key={hud.comic.id}
+              className={`comic-pop comic-${hud.comic.tone}`}
+              aria-hidden="true"
+            >
+              <span>{hud.comic.text}</span>
+            </div>
+          )}
           <div className="combat-message" aria-live="polite">
             {hud.message}
           </div>
@@ -350,17 +385,17 @@ export default function Home() {
               </div>
             </div>
             <div className="ammo-panel">
-              {hud.weaponKey === 'rifle' && (
-                <Image
-                  className="weapon-hud-image"
-                  src={RIFLE_HUD_URL}
-                  alt=""
-                  width={180}
-                  height={120}
-                  draggable={false}
-                  unoptimized
-                />
-              )}
+              <Image
+                className="weapon-hud-image"
+                src={
+                  hud.weaponKey === 'rifle' ? RIFLE_HUD_URL : LAUNCHER_HUD_URL
+                }
+                alt=""
+                width={180}
+                height={120}
+                draggable={false}
+                unoptimized
+              />
               <span>{hud.weapon}</span>
               <div>
                 <strong>{hud.ammo.toString().padStart(2, '0')}</strong>
@@ -427,12 +462,12 @@ export default function Home() {
           {hud.phase === 'countdown' && !paused && (
             <div className="countdown">
               {Math.ceil(hud.countdown)}
-              <span>GET READY.</span>
+              <span>À TOI DE JOUER !</span>
             </div>
           )}
           {hud.hp <= 0 && hud.phase !== 'finished' && !paused && (
             <div className="death-panel">
-              <span>YOU GOT SCRAPPED.</span>
+              <span>OUCH… K.O. !</span>
               <strong>RETOUR DANS {Math.max(1, Math.ceil(hud.respawn))}</strong>
             </div>
           )}
@@ -441,7 +476,9 @@ export default function Home() {
               <div className="overlay-card">
                 <span className="eyebrow">DUEL TERMINÉ</span>
                 <h2>
-                  {hud.score[0] > hud.score[1] ? 'NICE SHOOTING.' : 'GET EVEN.'}
+                  {hud.score[0] > hud.score[1]
+                    ? 'QUEL CARTON !'
+                    : 'LA REVANCHE ?'}
                 </h2>
                 <div className="result-score">
                   {hud.score[0]} <span>–</span> {hud.score[1]}
@@ -470,7 +507,7 @@ export default function Home() {
           {paused && hud.phase !== 'finished' && (
             <div className="center-overlay">
               <div className="overlay-card pause-card">
-                <span className="eyebrow">TAKE A BREATHER.</span>
+                <span className="eyebrow">À SUIVRE…</span>
                 <h2>PAUSE</h2>
                 <p>
                   {mode === 'practice'
@@ -544,7 +581,7 @@ export default function Home() {
       </div>
       <div className="mobile-notice">
         <Crosshair />
-        <h2>SEE YOU ON DESKTOP.</h2>
+        <h2>RENDEZ-VOUS SUR ORDI !</h2>
         <p>
           HOTSHOT se joue avec un clavier et une souris. Ouvre cette page sur
           ton ordinateur pour entrer dans l’arène.

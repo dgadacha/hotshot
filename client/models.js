@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { COMIC } from './toon.js';
 export function makeGunner(world, slot, assets) {
   const group = new THREE.Group(),
     color = slot === 0 ? 0x359eca : 0xe0523f;
@@ -40,7 +41,7 @@ export function makeGunner(world, slot, assets) {
   const shield = new THREE.Mesh(
     new THREE.SphereGeometry(1.18, 16, 10),
     new THREE.MeshBasicMaterial({
-      color: 0x70d9ef,
+      color: COMIC.cyan,
       transparent: true,
       opacity: 0.15,
       wireframe: true,
@@ -119,9 +120,9 @@ export function makeViewWeapon(world, assets) {
   b(grenade, 0.06, -0.29, 0.02, 0.19, 0.31, 0.2, 0x2b809d).rotation.x = -0.5;
   b(grenade, -0.2, -0.18, -0.61, 0.19, 0.19, 0.25, 0xc6a37e);
   const flash = new THREE.Mesh(
-    new THREE.ConeGeometry(0.18, 0.48, 5),
+    new THREE.ConeGeometry(0.23, 0.44, 4),
     new THREE.MeshBasicMaterial({
-      color: 0xffd85d,
+      color: COMIC.yellow,
       transparent: true,
       opacity: 0.95,
       depthTest: false,

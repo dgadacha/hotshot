@@ -1,41 +1,46 @@
 import * as THREE from 'three';
 import { MAP } from '../shared/config.js';
+import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
+import { COMIC, comicColor, createToonRamp, toonMaterial } from './toon.js';
 const COLORS = {
-  metal: 0x313d43,
-  concrete: 0x8b8d86,
-  yellow: 0xffc445,
-  dark: 0x19272d,
-  blue: 0x39b8e5,
-  red: 0xf05a43,
+  metal: COMIC.violet,
+  concrete: COMIC.white,
+  yellow: COMIC.yellow,
+  dark: COMIC.ink,
+  blue: COMIC.cyan,
+  red: COMIC.pink,
 };
 export function createScene(container) {
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x9aafb1);
-  scene.fog = new THREE.Fog(0x9aafb1, 38, 110);
+  scene.background = new THREE.Color(COMIC.sky);
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
     powerPreference: 'high-performance',
   });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.shadowMap.type = THREE.BasicShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.25;
+  renderer.toneMapping = THREE.NoToneMapping;
+  const ramp = createToonRamp();
+  const outlines = new OutlineEffect(renderer, {
+    defaultThickness: 0.0035,
+    defaultColor: new THREE.Color(COMIC.ink).toArray(),
+  });
   container.appendChild(renderer.domElement);
   const camera = new THREE.PerspectiveCamera(83, 1, 0.06, 160);
   camera.rotation.order = 'YXZ';
   scene.add(camera);
   // A separate depth pass keeps the view weapon out of walls while preserving
-  // depth between its own textured surfaces (the GLB is double-sided).
+  // depth between its own surfaces (the GLB is double-sided).
   const viewScene = new THREE.Scene();
   const viewCamera = new THREE.PerspectiveCamera(65, 1, 0.02, 5);
-  viewScene.add(new THREE.HemisphereLight(0xc8e6ef, 0x66604e, 2.6));
-  const weaponLight = new THREE.DirectionalLight(0xffe2aa, 3.4);
+  viewScene.add(new THREE.HemisphereLight(COMIC.white, COMIC.violet, 0.8));
+  const weaponLight = new THREE.DirectionalLight(COMIC.white, 1.5);
   weaponLight.position.set(-2, 4, 2);
   viewScene.add(weaponLight);
-  scene.add(new THREE.HemisphereLight(0xc8e6ef, 0x66604e, 2.6));
-  const sun = new THREE.DirectionalLight(0xffe2aa, 3.4);
+  scene.add(new THREE.HemisphereLight(COMIC.white, COMIC.violet, 0.8));
+  const sun = new THREE.DirectionalLight(COMIC.white, 1.5);
   sun.position.set(-16, 38, 14);
   sun.castShadow = true;
   Object.assign(sun.shadow.camera, {
@@ -55,12 +60,11 @@ export function createScene(container) {
     if (!materials.has(key))
       materials.set(
         key,
-        new THREE.MeshStandardMaterial({
-          color: c,
-          roughness: 0.84,
-          metalness: 0.12,
-          ...(emissive ? { emissive: c, emissiveIntensity: 1.2 } : {}),
-        }),
+        toonMaterial(
+          c,
+          ramp,
+          emissive ? { emissive: comicColor(c), emissiveIntensity: 0.35 } : {},
+        ),
       );
     return materials.get(key);
   };
@@ -181,9 +185,11 @@ export function createScene(container) {
       box(s * 23.8, 2, z, 0.25, 2, 0.3, COLORS.dark);
     }
     box(s * 21, 10, -21, 1.4, 20, 1.4, 0xb68432);
-    box(0, 16, -21, 43, 1.1, 1.1, 0xb68432);
-    for (let x = -20; x <= 20; x += 2)
-      box(x, 15.9, -20.4, 0.65, 0.7, 0.04, 0x665437).rotation.z = 0.5;
+    if (s === -1) {
+      box(0, 16, -21, 43, 1.1, 1.1, 0xb68432);
+      for (let x = -20; x <= 20; x += 2)
+        box(x, 15.9, -20.4, 0.65, 0.7, 0.04, 0x665437).rotation.z = 0.5;
+    }
     box(s * 30, 5, s * 18, 8, 10, 10, 0x63797b);
     const stack = new THREE.Mesh(
       new THREE.CylinderGeometry(1.3, 1.7, 20, 10),
@@ -203,15 +209,20 @@ export function createScene(container) {
   textCanvas.width = 1024;
   textCanvas.height = 256;
   const ctx = textCanvas.getContext('2d');
-  ctx.fillStyle = '#24373a';
+  ctx.fillStyle = '#ffe234';
   ctx.fillRect(0, 0, 1024, 256);
-  ctx.fillStyle = '#ffc445';
-  ctx.font = '900 136px Impact, sans-serif';
+  ctx.fillStyle = '#15122b';
+  ctx.lineWidth = 20;
+  ctx.strokeStyle = '#15122b';
+  ctx.strokeRect(0, 0, 1024, 256);
+  ctx.font = 'italic 900 136px Impact, sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText('SCRAPYARD', 512, 169);
+  const signTexture = new THREE.CanvasTexture(textCanvas);
+  signTexture.colorSpace = THREE.SRGBColorSpace;
   const sign = new THREE.Mesh(
     new THREE.PlaneGeometry(12, 3),
-    new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(textCanvas) }),
+    new THREE.MeshBasicMaterial({ map: signTexture }),
   );
   sign.position.set(0, 7.4, -23.9);
   scene.add(sign);
@@ -233,17 +244,21 @@ export function createScene(container) {
     renderer,
     box,
     mat,
+    ramp,
     renderGame() {
       renderer.render(scene, camera);
+      outlines.renderOutline(scene, camera);
       renderer.autoClear = false;
       renderer.clearDepth();
       renderer.render(viewScene, viewCamera);
+      outlines.renderOutline(viewScene, viewCamera);
       renderer.autoClear = true;
     },
     lobby(t) {
       camera.position.set(14 + Math.sin(t * 0.07) * 3, 9.5, 17);
       camera.lookAt(-3, 2, -6);
       renderer.render(scene, camera);
+      outlines.renderOutline(scene, camera);
     },
     dispose() {
       observer.disconnect();
@@ -261,6 +276,7 @@ export function createScene(container) {
       };
       scene.traverse(disposeObject);
       viewScene.traverse(disposeObject);
+      ramp.dispose();
       renderer.dispose();
       renderer.domElement.remove();
     },

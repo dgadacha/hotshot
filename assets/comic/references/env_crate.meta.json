@@ -1,0 +1,52 @@
+{
+  "id": "env_crate",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-9f8108a9-8829-41ce-b7c8-57bf9e37c7ca.png",
+  "referenceSize": [
+    1374,
+    1145
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    82,
+    32,
+    1287,
+    1134
+  ],
+  "marginFractionsLTRB": [
+    0.05967976710334789,
+    0.02794759825327511,
+    0.06331877729257641,
+    0.00960698689956332
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Entire clean bright pink crate, broad cyan band and yellow bolts, no grain or rust.",
+    "Silhouette looks more cubic than requested low 3x3x2 volume. Requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    103,
+    41,
+    1281,
+    1132
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.07496360989810771,
+    0.03580786026200873,
+    0.06768558951965066,
+    0.011353711790393014
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.38788797569331884,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

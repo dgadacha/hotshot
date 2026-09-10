@@ -1,0 +1,52 @@
+{
+  "id": "env_container",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-ef09bbdf-a10f-4bd8-8de2-90f18e3a49f6.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    0,
+    3,
+    1463,
+    994
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.0029296875,
+    0.047526041666666664,
+    0.029296875
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Entire coherent container with closed twin doors, long corrugated side and roof. Clean flat saturated palette.",
+    "Thin highlights and slight soft shifts remain; requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    108,
+    39,
+    1434,
+    991
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.0703125,
+    0.0380859375,
+    0.06640625,
+    0.0322265625
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.40292104085286456,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

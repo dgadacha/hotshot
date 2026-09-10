@@ -1,0 +1,53 @@
+{
+  "id": "char_brute",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-161ba5df-daf4-4e3b-9ed0-1916a60b7f44.png",
+  "referenceSize": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    0,
+    117,
+    1012,
+    1508
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.076171875,
+    0.01171875,
+    0.018229166666666668
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete unarmed adult very broad Brute, massive forearms and tiny legs, hands separate from torso, no extra prop.",
+    "Arm angle is narrower than requested 35-degree A-pose; hands/fingers are relaxed and partly curled.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    16,
+    125,
+    1009,
+    1436
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.015625,
+    0.08138020833333333,
+    0.0146484375,
+    0.06510416666666667
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4769401550292969,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

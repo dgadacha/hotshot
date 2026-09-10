@@ -1,0 +1,10 @@
+{
+  "id": "env_crate",
+  "reference": "references/env_crate_3q_v1.png",
+  "usedPrompt": "prompts/generated/env_crate_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

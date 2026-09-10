@@ -1,0 +1,484 @@
+{
+  "version": 2,
+  "engine": "three.js",
+  "deliveryDirectory": "incoming",
+  "artDirection": "HOTSHOT — chunky cartoon industrial",
+  "assets": [
+    {
+      "id": "char_gunner",
+      "label": "Gunner",
+      "lot": "A",
+      "glb": "char_gunner.glb",
+      "hudPng": "char_gunner.png",
+      "prompt": "prompts/char_gunner.txt",
+      "targetSize": "1,85 m de haut",
+      "referenceStatus": "generated",
+      "reference": "references/char_gunner_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_gunner_3q_v1.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "weapon_assault_rifle",
+      "label": "Assault Rifle",
+      "lot": "A",
+      "glb": "weapon_assault_rifle.glb",
+      "hudPng": "weapon_assault_rifle.png",
+      "prompt": "prompts/weapon_assault_rifle.txt",
+      "targetSize": "1,05 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_assault_rifle_3q_v2.png",
+      "glbReceived": true,
+      "hudPngReceived": true,
+      "usedPrompt": "prompts/generated/weapon_assault_rifle_3q_v2.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ],
+      "integrationStatus": "integrated",
+      "runtimeGlb": "/assets/weapons/weapon_assault_rifle.glb",
+      "runtimeHudPng": "/assets/weapons/weapon_assault_rifle.png",
+      "sourceDelivery": "weapon_assault_rifle_3q_v2",
+      "deliveryTriangles": 29829
+    },
+    {
+      "id": "weapon_grenade_launcher",
+      "label": "Grenade Launcher",
+      "lot": "A",
+      "glb": "weapon_grenade_launcher.glb",
+      "hudPng": "weapon_grenade_launcher.png",
+      "prompt": "prompts/weapon_grenade_launcher.txt",
+      "targetSize": "0,85 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_grenade_launcher_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_grenade_launcher_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "projectile_grenade",
+      "label": "Grenade",
+      "lot": "A",
+      "glb": "projectile_grenade.glb",
+      "hudPng": "projectile_grenade.png",
+      "prompt": "prompts/projectile_grenade.txt",
+      "targetSize": "0,28 m de diamètre",
+      "referenceStatus": "generated",
+      "reference": "references/projectile_grenade_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/projectile_grenade_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "arms_gunner",
+      "label": "Bras FPS du Gunner",
+      "lot": "A",
+      "glb": "arms_gunner.glb",
+      "hudPng": "arms_gunner.png",
+      "prompt": "prompts/arms_gunner.txt",
+      "targetSize": "Avant-bras d’environ 0,40 m",
+      "referenceStatus": "generated",
+      "reference": "references/arms_gunner_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/arms_gunner_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "env_container",
+      "label": "Container de couverture",
+      "lot": "B",
+      "glb": "env_container.glb",
+      "hudPng": "env_container.png",
+      "prompt": "prompts/env_container.txt",
+      "targetSize": "6 × 3 × 3,20 m (L × P × H)",
+      "referenceStatus": "generated",
+      "reference": "references/env_container_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_container_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "env_crate",
+      "label": "Caisse de couverture",
+      "lot": "B",
+      "glb": "env_crate.glb",
+      "hudPng": "env_crate.png",
+      "prompt": "prompts/env_crate.txt",
+      "targetSize": "3 × 3 × 2 m",
+      "referenceStatus": "generated",
+      "reference": "references/env_crate_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_crate_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "env_press",
+      "label": "Presse industrielle centrale",
+      "lot": "B",
+      "glb": "env_press.glb",
+      "hudPng": "env_press.png",
+      "prompt": "prompts/env_press.txt",
+      "targetSize": "2,20 × 5,50 × 2,20 m",
+      "referenceStatus": "generated",
+      "reference": "references/env_press_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_press_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "env_pipe_elbow",
+      "label": "Coude de tuyau",
+      "lot": "B",
+      "glb": "env_pipe_elbow.glb",
+      "hudPng": "env_pipe_elbow.png",
+      "prompt": "prompts/env_pipe_elbow.txt",
+      "targetSize": "Diamètre extérieur 0,70 m",
+      "referenceStatus": "generated",
+      "reference": "references/env_pipe_elbow_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_pipe_elbow_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
+    },
+    {
+      "id": "env_fan",
+      "label": "Ventilateur industriel",
+      "lot": "B",
+      "glb": "env_fan.glb",
+      "hudPng": "env_fan.png",
+      "prompt": "prompts/env_fan.txt",
+      "targetSize": "2,50 × 0,70 × 2,50 m",
+      "referenceStatus": "generated",
+      "reference": "references/env_fan_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_fan_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
+    },
+    {
+      "id": "env_gantry_crane",
+      "label": "Grue portique",
+      "lot": "B",
+      "glb": "env_gantry_crane.glb",
+      "hudPng": "env_gantry_crane.png",
+      "prompt": "prompts/env_gantry_crane.txt",
+      "targetSize": "42 m de portée × 20 m de haut",
+      "referenceStatus": "generated",
+      "reference": "references/env_gantry_crane_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_gantry_crane_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "env_scrap_pile",
+      "label": "Tas de ferraille",
+      "lot": "B",
+      "glb": "env_scrap_pile.glb",
+      "hudPng": "env_scrap_pile.png",
+      "prompt": "prompts/env_scrap_pile.txt",
+      "targetSize": "3 × 2 × 1,50 m",
+      "referenceStatus": "generated",
+      "reference": "references/env_scrap_pile_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_scrap_pile_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "char_brute",
+      "label": "Brute",
+      "lot": "C",
+      "glb": "char_brute.glb",
+      "hudPng": "char_brute.png",
+      "prompt": "prompts/char_brute.txt",
+      "targetSize": "2,10 m de haut — silhouette très large",
+      "referenceStatus": "generated",
+      "reference": "references/char_brute_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_brute_3q_v1.txt",
+      "referenceSize": [
+        1225,
+        1284
+      ]
+    },
+    {
+      "id": "weapon_boomstick",
+      "label": "Boomstick",
+      "lot": "C",
+      "glb": "weapon_boomstick.glb",
+      "hudPng": "weapon_boomstick.png",
+      "prompt": "prompts/weapon_boomstick.txt",
+      "targetSize": "1,15 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_boomstick_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_boomstick_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "weapon_knuckle_cannon",
+      "label": "Knuckle Cannon",
+      "lot": "C",
+      "glb": "weapon_knuckle_cannon.glb",
+      "hudPng": "weapon_knuckle_cannon.png",
+      "prompt": "prompts/weapon_knuckle_cannon.txt",
+      "targetSize": "0,95 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_knuckle_cannon_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_knuckle_cannon_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "projectile_knuckle",
+      "label": "Projectile du Knuckle Cannon",
+      "lot": "C",
+      "glb": "projectile_knuckle.glb",
+      "hudPng": "projectile_knuckle.png",
+      "prompt": "prompts/projectile_knuckle.txt",
+      "targetSize": "0,45 m de diamètre",
+      "referenceStatus": "generated",
+      "reference": "references/projectile_knuckle_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/projectile_knuckle_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "char_runner",
+      "label": "Runner",
+      "lot": "C",
+      "glb": "char_runner.glb",
+      "hudPng": "char_runner.png",
+      "prompt": "prompts/char_runner.txt",
+      "targetSize": "1,70 m de haut — silhouette fine",
+      "referenceStatus": "generated",
+      "reference": "references/char_runner_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_runner_3q_v1.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "weapon_smg",
+      "label": "SMG",
+      "lot": "C",
+      "glb": "weapon_smg.glb",
+      "hudPng": "weapon_smg.png",
+      "prompt": "prompts/weapon_smg.txt",
+      "targetSize": "0,65 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_smg_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_smg_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "weapon_sawed_off",
+      "label": "Sawed-Off",
+      "lot": "C",
+      "glb": "weapon_sawed_off.glb",
+      "hudPng": "weapon_sawed_off.png",
+      "prompt": "prompts/weapon_sawed_off.txt",
+      "targetSize": "0,48 m de long",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_sawed_off_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_sawed_off_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "pickup_health_small",
+      "label": "Small Health",
+      "lot": "D",
+      "glb": "pickup_health_small.glb",
+      "hudPng": "pickup_health_small.png",
+      "prompt": "prompts/pickup_health_small.txt",
+      "targetSize": "0,45 × 0,30 × 0,35 m",
+      "referenceStatus": "generated",
+      "reference": "references/pickup_health_small_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_health_small_3q_v1.txt",
+      "referenceSize": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "id": "pickup_health_mega",
+      "label": "Mega Health",
+      "lot": "D",
+      "glb": "pickup_health_mega.glb",
+      "hudPng": "pickup_health_mega.png",
+      "prompt": "prompts/pickup_health_mega.txt",
+      "targetSize": "0,65 × 0,45 × 0,80 m",
+      "referenceStatus": "generated",
+      "reference": "references/pickup_health_mega_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_health_mega_3q_v1.txt",
+      "referenceSize": [
+        1207,
+        1303
+      ]
+    },
+    {
+      "id": "pickup_armor",
+      "label": "Armor",
+      "lot": "D",
+      "glb": "pickup_armor.glb",
+      "hudPng": "pickup_armor.png",
+      "prompt": "prompts/pickup_armor.txt",
+      "targetSize": "0,70 m de haut",
+      "referenceStatus": "generated",
+      "reference": "references/pickup_armor_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_armor_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
+    },
+    {
+      "id": "pickup_overdrive",
+      "label": "Overdrive Canister",
+      "lot": "D",
+      "glb": "pickup_overdrive.glb",
+      "hudPng": "pickup_overdrive.png",
+      "prompt": "prompts/pickup_overdrive.txt",
+      "targetSize": "0,55 m de haut",
+      "referenceStatus": "generated",
+      "reference": "references/pickup_overdrive_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_overdrive_3q_v1.txt",
+      "referenceSize": [
+        1225,
+        1284
+      ]
+    },
+    {
+      "id": "prop_explosive_barrel",
+      "label": "Baril explosif",
+      "lot": "D",
+      "glb": "prop_explosive_barrel.glb",
+      "hudPng": "prop_explosive_barrel.png",
+      "prompt": "prompts/prop_explosive_barrel.txt",
+      "targetSize": "0,85 m de diamètre × 1,25 m de haut",
+      "referenceStatus": "generated",
+      "reference": "references/prop_explosive_barrel_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_explosive_barrel_3q_v1.txt",
+      "referenceSize": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "id": "prop_hazard_button",
+      "label": "Bouton de danger",
+      "lot": "D",
+      "glb": "prop_hazard_button.glb",
+      "hudPng": "prop_hazard_button.png",
+      "prompt": "prompts/prop_hazard_button.txt",
+      "targetSize": "0,45 × 0,20 × 0,60 m",
+      "referenceStatus": "generated",
+      "reference": "references/prop_hazard_button_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_hazard_button_3q_v1.txt",
+      "referenceSize": [
+        1295,
+        1215
+      ]
+    },
+    {
+      "id": "prop_jump_pad",
+      "label": "Jump Pad",
+      "lot": "D",
+      "glb": "prop_jump_pad.glb",
+      "hudPng": "prop_jump_pad.png",
+      "prompt": "prompts/prop_jump_pad.txt",
+      "targetSize": "2,50 × 2,50 × 0,35 m",
+      "referenceStatus": "generated",
+      "reference": "references/prop_jump_pad_3q_v1.png",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_jump_pad_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "referenceFilenamePattern": "{id}_3q_v{version}.png",
+  "generationTool": "imagegen_builtin",
+  "referencesGenerated": 26
+}

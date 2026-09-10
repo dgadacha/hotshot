@@ -1,0 +1,10 @@
+{
+  "id": "pickup_health_small",
+  "reference": "references/pickup_health_small_3q_v1.png",
+  "usedPrompt": "prompts/generated/pickup_health_small_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1374,
+    1145
+  ]
+}

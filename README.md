@@ -6,11 +6,15 @@ Dépôt principal : [dgadacha/hotshot](https://github.com/dgadacha/hotshot).
 
 ## Assets 3D et références
 
-Le [catalogue de production](assets/ASSET_PRODUCTION.md) contient la liste des 26 GLB, les prompts des vues 3/4 et les conventions de livraison. Les **26 références 3/4 générées** sont réunies dans la [galerie des assets](assets/REFERENCES.md), avec leurs prompts exacts et les noms des GLB/PNG attendus. Les prompts individuels sont dans [assets/prompts/](assets/prompts/) et les images originales dans [assets/references/](assets/references/).
+**COMIC EDITION** : aplats cyan/jaune/rose/violet, trois niveaux de cel-shading, contours d’encre et HUD en cases de BD. Les impacts, explosions, tirs, rechargements et roulades déclenchent des effets dessinés et des onomatopées limitées en fréquence.
 
-Déposer chaque modèle et son PNG de HUD dans [assets/incoming/](assets/incoming/), avec le même nom de base, par exemple `weapon_assault_rifle.glb` et `weapon_assault_rifle.png`. Sur le poste de développement actuel, le raccourci `Documents/hotshot/assets` conserve l'accès au même dossier.
+Le [catalogue de production](assets/ASSET_PRODUCTION.md) et la [galerie des 26 nouvelles références](assets/REFERENCES.md) donnent les GLB/PNG attendus et les prompts exacts. La DA industrielle précédente est archivée dans `assets/archive/industrial-v1`.
 
-**Fusil d’assaut intégré** : le GLB et le PNG livrés sous le nom `weapon_assault_rifle_3q_v2` sont servis depuis `public/assets/weapons/`. Le modèle texturé remplace le fusil procédural en vue FPS et chez l’adversaire ; le PNG apparaît avec les munitions du fusil. La livraison est conservée sans conversion (29 829 triangles, GLB de 19,4 Mo, textures intégrées 2 048/4 096 px). L’orientation est corrigée vers -Z et la longueur normalisée à 1,05 m au chargement. Le modèle se télécharge une seule fois par partie ouverte, avec un modèle procédural pendant le chargement ou en cas d’échec. Le recul et le rechargement animent l’arme entière, car cette livraison est un seul mesh sans animations séparées.
+Déposer chaque modèle et son PNG de HUD dans [assets/incoming/](assets/incoming/), ou à la racine du projet, avec le même nom de base. Le raccourci `Documents/hotshot/assets` pointe vers le catalogue.
+
+**Fusil provisoire adapté** : la géométrie livrée de 29 829 triangles est conservée, avec six matériaux plats et une rampe toon, à 1,05 m orientée vers -Z. La copie `weapon_assault_rifle_comic.glb` fait environ 1,09 Mo, sans textures PBR. L’ancien GLB/PNG est conservé. Le script `node scripts/make-comic-rifle.mjs` reproduit cette conversion. La nouvelle référence du fusil sert provisoirement au HUD ; les nouveaux GLB restent à produire selon le processus convenu.
+
+Le téléchargement du fusil est partagé entre FPS et adversaires, avec un modèle procédural pendant le chargement ou en cas d’échec. Le recul et le rechargement animent l’arme entière, car le GLB existant n’a pas d’animations séparées.
 
 ## Jouer en développement
 
@@ -23,8 +27,8 @@ npm run dev:all
 
 Ouvrir **http://localhost:5173**. `Entraînement` démarre un duel contre un bot, sans connexion au serveur. Pour un duel humain :
 
-1. Le premier joueur choisit **Host game**. Le serveur par défaut est `ws://localhost:3001`.
-2. Le second choisit **Join game**, avec le même serveur et le code à six caractères.
+1. Le premier joueur choisit **Créer un duel**. Le serveur par défaut est `ws://localhost:3001`.
+2. Le second choisit **Rejoindre un duel**, avec le même serveur et le code à six caractères.
 3. Une fois les deux joueurs présents, le match démarre après trois secondes.
 
 Pour deux ordinateurs sur le même réseau : ouvrir `http://IP_DU_SERVEUR:5173` et utiliser `ws://IP_DU_SERVEUR:3001`. Le port 3001 doit être accessible sur ce réseau. Deux fenêtres sur le même ordinateur permettent aussi de vérifier la connexion ; une seule fenêtre capture la souris à la fois.
@@ -65,7 +69,7 @@ L’entraînement se met en pause avec le menu. Un duel réseau continue. La pro
 - Fusil 18 dégâts / 600 RPM / 30 cartouches / rechargement 1,8 s ; rafale plus précise à dégâts ×1,1.
 - Lance-grenades : quatre grenades, rebonds, mèche de 2,2 s, détonation à distance des grenades du propriétaire, dégâts de zone avec obstacles, dégâts personnels et knockback.
 - Combat Roll, saut, contrôle aérien, glissade et accroupissement. Après un kill, 50 % du chargeur du fusil est restauré. Réserve de munitions illimitée pour ce prototype.
-- Arène à deux niveaux, deux rampes, chemins latéraux et couvertures. Géométrie greybox industrielle ; Gunner et lance-grenades procéduraux, fusil d’assaut en GLB texturé.
+- Arène à deux niveaux, deux rampes, chemins latéraux et couvertures. Géométrie procédurale en cel-shading ; Gunner et lance-grenades procéduraux, fusil d’assaut en GLB à matériaux plats.
 - Course à dix éliminations, huit minutes, prolongation au prochain kill si égalité ; revanche après accord des deux joueurs.
 - HUD, hitmarkers, petits nombres de dégâts, kill feed, flash, recul, animations mécaniques simples, sons synthétisés.
 - Entraînement avec bot utilisant les mêmes règles ; création/rejoindre un duel via code.
@@ -79,7 +83,7 @@ Brute, Runner, pickups, armure, Overdrive, Hotshot, interactions environnemental
 - `shared/simulation.js` : état autoritaire du match, armes, dégâts, respawns, score, IA d’entraînement.
 - `server/index.js` : rooms WebSocket, validation des entrées, limites de débit et snapshots.
 - `client/engine.js` : contrôles, prédiction de mouvement, réconciliation, interpolation des adversaires, feedback prédit.
-- `client/scene.js`, `models.js`, `effects.js`, `audio.js` : présentation Three.js et audio.
+- `client/toon.js`, `scene.js`, `models.js`, `effects.js`, `audio.js` : palette, rendu MeshToon, contours, effets BD et audio.
 - `client/weapon-assets.js` : chargement partagé du GLB, orientation, échelle et libération des ressources ; la vue FPS utilise une passe de profondeur séparée.
 - `app/` : interface React du navigateur.
 

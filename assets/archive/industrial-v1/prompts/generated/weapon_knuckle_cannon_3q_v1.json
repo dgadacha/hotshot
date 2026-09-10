@@ -1,0 +1,10 @@
+{
+  "id": "weapon_knuckle_cannon",
+  "reference": "references/weapon_knuckle_cannon_3q_v1.png",
+  "usedPrompt": "prompts/generated/weapon_knuckle_cannon_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

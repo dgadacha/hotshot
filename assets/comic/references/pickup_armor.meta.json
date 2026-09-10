@@ -1,0 +1,53 @@
+{
+  "id": "pickup_armor",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-5ad38aed-0275-42d5-a7d4-a9d5ff48fa34.png",
+  "referenceSize": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    31,
+    87,
+    1292,
+    1199
+  ],
+  "marginFractionsLTRB": [
+    0.023628048780487805,
+    0.0725604670558799,
+    0.01524390243902439,
+    0.0
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete standalone layered cyan chest armor, three yellow fasteners, purple outer rim and pink inset.",
+    "Shoulder extensions add detail beyond a simple shield-like plate; some extra tonal steps.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    173,
+    90,
+    1140,
+    1107
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.13185975609756098,
+    0.0750625521267723,
+    0.13109756097560976,
+    0.07673060884070058
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.58516878903151,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

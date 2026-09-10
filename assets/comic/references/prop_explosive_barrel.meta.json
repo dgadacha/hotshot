@@ -1,0 +1,53 @@
+{
+  "id": "prop_explosive_barrel",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-9e135434-c82e-4d4e-975b-b3d746ad8e18.png",
+  "referenceSize": [
+    1122,
+    1402
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    0,
+    69,
+    1094,
+    1402
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.049215406562054205,
+    0.024955436720142603,
+    0.0
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete coral-red barrel with two yellow bands, warning triangle and one sealed top cap.",
+    "Some smooth tonal transitions remain despite flat-shading prompt.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    188,
+    78,
+    931,
+    1324
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.16755793226381463,
+    0.05563480741797432,
+    0.17023172905525846,
+    0.05563480741797432
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4710631107585039,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

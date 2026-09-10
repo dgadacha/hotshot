@@ -1,0 +1,52 @@
+{
+  "id": "env_gantry_crane",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-bca11ecd-149c-4eda-ac8c-1db3b699f560.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    43,
+    25,
+    1504,
+    1002
+  ],
+  "marginFractionsLTRB": [
+    0.027994791666666668,
+    0.0244140625,
+    0.020833333333333332,
+    0.021484375
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Entire coherent crane, all four feet and full top beam visible, central hook connected.",
+    "View is closer to level than slightly elevated; extra railing on trolley. Requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    48,
+    48,
+    1492,
+    942
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.03125,
+    0.046875,
+    0.028645833333333332,
+    0.080078125
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.6193930308024088,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

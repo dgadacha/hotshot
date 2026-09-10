@@ -1,0 +1,10 @@
+{
+  "id": "prop_jump_pad",
+  "reference": "references/prop_jump_pad_3q_v1.png",
+  "usedPrompt": "prompts/generated/prop_jump_pad_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

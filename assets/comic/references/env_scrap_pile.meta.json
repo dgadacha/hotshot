@@ -1,0 +1,53 @@
+{
+  "id": "env_scrap_pile",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-92b86446-6e66-45d6-b253-907dd18105f8.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    79,
+    17,
+    1488,
+    1024
+  ],
+  "marginFractionsLTRB": [
+    0.051432291666666664,
+    0.0166015625,
+    0.03125,
+    0.0
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete single coherent pile with gear, pipe, motor casing and broad bent plates, all touching.",
+    "A few glossy highlights and soft color changes remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    84,
+    108,
+    1453,
+    931
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.0546875,
+    0.10546875,
+    0.054036458333333336,
+    0.0908203125
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5288225809733073,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

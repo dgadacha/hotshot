@@ -1,0 +1,52 @@
+{
+  "id": "env_press",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-c2723e42-0b55-4e78-bbd1-d1b96100b737.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    30,
+    35,
+    1507,
+    992
+  ],
+  "marginFractionsLTRB": [
+    0.01953125,
+    0.0341796875,
+    0.018880208333333332,
+    0.03125
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Entire single press, vivid palette, no readable numbers on pressure gauge.",
+    "Four visible piston columns rather than two requested enclosed side pistons. Minor soft shading remains. Requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    34,
+    38,
+    1504,
+    989
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.022135416666666668,
+    0.037109375,
+    0.020833333333333332,
+    0.0341796875
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.3752644856770833,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

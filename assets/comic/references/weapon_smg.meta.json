@@ -1,0 +1,53 @@
+{
+  "id": "weapon_smg",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-1a167535-fd94-4b54-ba70-9f5cb9e57bc9.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    0,
+    55,
+    1522,
+    998
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.0537109375,
+    0.009114583333333334,
+    0.025390625
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete standalone compact SMG with straight inserted magazine and short perforated barrel.",
+    "Minor soft shading and silver spring highlights remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    67,
+    73,
+    1491,
+    947
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.043619791666666664,
+    0.0712890625,
+    0.029296875,
+    0.0751953125
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.6772937774658203,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

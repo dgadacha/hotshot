@@ -1,0 +1,54 @@
+{
+  "id": "char_gunner",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-0fedc34d-e8f5-4a23-888c-4c072c0bcb2e.png",
+  "referenceSize": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    49,
+    40,
+    981,
+    1490
+  ],
+  "marginFractionsLTRB": [
+    0.0478515625,
+    0.026041666666666668,
+    0.0419921875,
+    0.029947916666666668
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Adult massive full-body character, hands empty and separated from torso; clear clean comic colors and purple shadow facets.",
+    "A-pose is narrower than the specified 35 degrees. Some residual soft tonal shifts on skin.",
+    "The displayed RGB preview has colored haze, but inspected background pixels have alpha 0.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    55,
+    73,
+    978,
+    1487
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.0537109375,
+    0.047526041666666664,
+    0.044921875,
+    0.031901041666666664
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5410353342692057,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "pickup_health_mega",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-4e9cc9d0-4d67-4ec5-8362-9f9b3c6c98ef.png",
+  "referenceSize": [
+    1145,
+    1374
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    0,
+    61,
+    1095,
+    1311
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.04439592430858806,
+    0.043668122270742356,
+    0.04585152838427948
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete upright medical canister with two integrated handles, raised green plus and acid-green/white scheme.",
+    "More than three tonal steps appear in some rounded fittings.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    118,
+    65,
+    1029,
+    1300
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.10305676855895196,
+    0.04730713245997089,
+    0.10131004366812227,
+    0.053857350800582245
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4309217342664455,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,8 +1,17 @@
 {
-  "version": 2,
+  "version": 3,
   "engine": "three.js",
   "deliveryDirectory": "incoming",
-  "artDirection": "HOTSHOT — chunky cartoon industrial",
+  "artDirection": "HOTSHOT — COMIC v2, ultra colorful flat cel-shading / MeshToon",
+  "palette": {
+    "cyan": "#13C9FF",
+    "yellow": "#FFE234",
+    "pink": "#FF3C91",
+    "violet": "#7135FF",
+    "ink": "#15122B",
+    "paper": "#FFFDF5",
+    "health": "#7AFF4C"
+  },
   "assets": [
     {
       "id": "char_gunner",
@@ -10,17 +19,21 @@
       "lot": "A",
       "glb": "char_gunner.glb",
       "hudPng": "char_gunner.png",
-      "prompt": "prompts/char_gunner.txt",
       "targetSize": "1,85 m de haut",
+      "prompt": "comic/prompts/char_gunner.txt",
+      "usedPrompt": "comic/prompts/char_gunner.txt",
       "referenceStatus": "generated",
-      "reference": "references/char_gunner_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/char_gunner_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/char_gunner_3q_v1.png",
+      "reference": "comic/references/char_gunner_comic_v1.png",
       "referenceSize": [
         1024,
         1536
-      ]
+      ],
+      "referenceSha256": "5cd978a0982427a4a817a479fb41fefa22e66afea538ce5b2ef9b528cdd4ddc4",
+      "runtimeMenuPng": "/assets/characters/char_gunner_comic.png"
     },
     {
       "id": "weapon_assault_rifle",
@@ -28,21 +41,24 @@
       "lot": "A",
       "glb": "weapon_assault_rifle.glb",
       "hudPng": "weapon_assault_rifle.png",
-      "prompt": "prompts/weapon_assault_rifle.txt",
       "targetSize": "1,05 m de long",
+      "prompt": "comic/prompts/weapon_assault_rifle.txt",
+      "usedPrompt": "comic/prompts/weapon_assault_rifle.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_assault_rifle_3q_v2.png",
-      "glbReceived": true,
-      "hudPngReceived": true,
-      "usedPrompt": "prompts/generated/weapon_assault_rifle_3q_v2.txt",
+      "glbReceived": false,
+      "hudPngReceived": false,
+      "integrationStatus": "previous_geometry_adapted_to_comic",
+      "previousReference": "references/weapon_assault_rifle_3q_v2.png",
+      "reference": "comic/references/weapon_assault_rifle_comic_v1.png",
       "referenceSize": [
-        1536,
-        1024
+        1774,
+        887
       ],
-      "integrationStatus": "integrated",
-      "runtimeGlb": "/assets/weapons/weapon_assault_rifle.glb",
-      "runtimeHudPng": "/assets/weapons/weapon_assault_rifle.png",
-      "sourceDelivery": "weapon_assault_rifle_3q_v2",
+      "referenceSha256": "575c3988355c8e665279f43e507175fb3d265887646f7c17c36527b364d0d0b2",
+      "runtimeGlb": "/assets/weapons/weapon_assault_rifle_comic.glb",
+      "runtimeHudPng": "/assets/weapons/weapon_assault_rifle_comic.png",
+      "runtimeHudSource": "generated_reference",
+      "geometrySource": "previous_delivery_weapon_assault_rifle_3q_v2",
       "deliveryTriangles": 29829
     },
     {
@@ -51,17 +67,21 @@
       "lot": "A",
       "glb": "weapon_grenade_launcher.glb",
       "hudPng": "weapon_grenade_launcher.png",
-      "prompt": "prompts/weapon_grenade_launcher.txt",
       "targetSize": "0,85 m de long",
+      "prompt": "comic/prompts/weapon_grenade_launcher.txt",
+      "usedPrompt": "comic/prompts/weapon_grenade_launcher.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_grenade_launcher_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/weapon_grenade_launcher_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/weapon_grenade_launcher_3q_v1.png",
+      "reference": "comic/references/weapon_grenade_launcher_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "69e2e43375e805b6ce60207aa5837996dff13486dcac3c60835878c28bdbec82",
+      "runtimeHudPng": "/assets/weapons/weapon_grenade_launcher_comic.png"
     },
     {
       "id": "projectile_grenade",
@@ -69,17 +89,20 @@
       "lot": "A",
       "glb": "projectile_grenade.glb",
       "hudPng": "projectile_grenade.png",
-      "prompt": "prompts/projectile_grenade.txt",
       "targetSize": "0,28 m de diamètre",
+      "prompt": "comic/prompts/projectile_grenade.txt",
+      "usedPrompt": "comic/prompts/projectile_grenade.txt",
       "referenceStatus": "generated",
-      "reference": "references/projectile_grenade_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/projectile_grenade_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/projectile_grenade_3q_v1.png",
+      "reference": "comic/references/projectile_grenade_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "9390f9eba2731ab48bd8ab0b3c76be7171fffde774945909834a1d29b2f6e476"
     },
     {
       "id": "arms_gunner",
@@ -87,17 +110,20 @@
       "lot": "A",
       "glb": "arms_gunner.glb",
       "hudPng": "arms_gunner.png",
-      "prompt": "prompts/arms_gunner.txt",
       "targetSize": "Avant-bras d’environ 0,40 m",
+      "prompt": "comic/prompts/arms_gunner.txt",
+      "usedPrompt": "comic/prompts/arms_gunner.txt",
       "referenceStatus": "generated",
-      "reference": "references/arms_gunner_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/arms_gunner_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/arms_gunner_3q_v1.png",
+      "reference": "comic/references/arms_gunner_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "158809c78bedf17a1b1c95f6dfbc5adab389d99405e04b1043762e7cc92ea1f9"
     },
     {
       "id": "env_container",
@@ -105,17 +131,20 @@
       "lot": "B",
       "glb": "env_container.glb",
       "hudPng": "env_container.png",
-      "prompt": "prompts/env_container.txt",
       "targetSize": "6 × 3 × 3,20 m (L × P × H)",
+      "prompt": "comic/prompts/env_container.txt",
+      "usedPrompt": "comic/prompts/env_container.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_container_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_container_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_container_3q_v1.png",
+      "reference": "comic/references/env_container_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "1884c7fdc806bbd83858e775dcf32f1c0d55d2b8ca5179fc3fe789f1eee9d418"
     },
     {
       "id": "env_crate",
@@ -123,17 +152,20 @@
       "lot": "B",
       "glb": "env_crate.glb",
       "hudPng": "env_crate.png",
-      "prompt": "prompts/env_crate.txt",
       "targetSize": "3 × 3 × 2 m",
+      "prompt": "comic/prompts/env_crate.txt",
+      "usedPrompt": "comic/prompts/env_crate.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_crate_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_crate_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_crate_3q_v1.png",
+      "reference": "comic/references/env_crate_comic_v1.png",
       "referenceSize": [
-        1536,
-        1024
-      ]
+        1374,
+        1145
+      ],
+      "referenceSha256": "4eac9b2f57fdf07338fca8f16e94e63e4810ca1ff3f76ccdf90ff4d55551b0c9"
     },
     {
       "id": "env_press",
@@ -141,17 +173,20 @@
       "lot": "B",
       "glb": "env_press.glb",
       "hudPng": "env_press.png",
-      "prompt": "prompts/env_press.txt",
       "targetSize": "2,20 × 5,50 × 2,20 m",
+      "prompt": "comic/prompts/env_press.txt",
+      "usedPrompt": "comic/prompts/env_press.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_press_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_press_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_press_3q_v1.png",
+      "reference": "comic/references/env_press_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "3e5d1592b386166d6551e3f2007d9e7509d27628ad81586384784570a3d67174"
     },
     {
       "id": "env_pipe_elbow",
@@ -159,17 +194,20 @@
       "lot": "B",
       "glb": "env_pipe_elbow.glb",
       "hudPng": "env_pipe_elbow.png",
-      "prompt": "prompts/env_pipe_elbow.txt",
       "targetSize": "Diamètre extérieur 0,70 m",
+      "prompt": "comic/prompts/env_pipe_elbow.txt",
+      "usedPrompt": "comic/prompts/env_pipe_elbow.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_pipe_elbow_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_pipe_elbow_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_pipe_elbow_3q_v1.png",
+      "reference": "comic/references/env_pipe_elbow_comic_v1.png",
       "referenceSize": [
-        1312,
-        1199
-      ]
+        1374,
+        1145
+      ],
+      "referenceSha256": "9c981766913a4ff00b9ba747af623f3da0b8ad236c21842c7528046221ec2407"
     },
     {
       "id": "env_fan",
@@ -177,17 +215,20 @@
       "lot": "B",
       "glb": "env_fan.glb",
       "hudPng": "env_fan.png",
-      "prompt": "prompts/env_fan.txt",
       "targetSize": "2,50 × 0,70 × 2,50 m",
+      "prompt": "comic/prompts/env_fan.txt",
+      "usedPrompt": "comic/prompts/env_fan.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_fan_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_fan_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_fan_3q_v1.png",
+      "reference": "comic/references/env_fan_comic_v1.png",
       "referenceSize": [
-        1312,
-        1199
-      ]
+        1304,
+        1206
+      ],
+      "referenceSha256": "8065895dc148b25e573c38d623176a2d2182192b34ac03213f1369efaf81dddd"
     },
     {
       "id": "env_gantry_crane",
@@ -195,17 +236,20 @@
       "lot": "B",
       "glb": "env_gantry_crane.glb",
       "hudPng": "env_gantry_crane.png",
-      "prompt": "prompts/env_gantry_crane.txt",
       "targetSize": "42 m de portée × 20 m de haut",
+      "prompt": "comic/prompts/env_gantry_crane.txt",
+      "usedPrompt": "comic/prompts/env_gantry_crane.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_gantry_crane_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_gantry_crane_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_gantry_crane_3q_v1.png",
+      "reference": "comic/references/env_gantry_crane_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "184c3bb47b862a6a403021fa55e87f3ab3fb8f534ba9eed0419e2ecbe2fcf58b"
     },
     {
       "id": "env_scrap_pile",
@@ -213,17 +257,20 @@
       "lot": "B",
       "glb": "env_scrap_pile.glb",
       "hudPng": "env_scrap_pile.png",
-      "prompt": "prompts/env_scrap_pile.txt",
       "targetSize": "3 × 2 × 1,50 m",
+      "prompt": "comic/prompts/env_scrap_pile.txt",
+      "usedPrompt": "comic/prompts/env_scrap_pile.txt",
       "referenceStatus": "generated",
-      "reference": "references/env_scrap_pile_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/env_scrap_pile_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/env_scrap_pile_3q_v1.png",
+      "reference": "comic/references/env_scrap_pile_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "f4344daaf2df131ec613f43ac22679659ab123ca4c674702a88b0184808a94e5"
     },
     {
       "id": "char_brute",
@@ -231,17 +278,20 @@
       "lot": "C",
       "glb": "char_brute.glb",
       "hudPng": "char_brute.png",
-      "prompt": "prompts/char_brute.txt",
       "targetSize": "2,10 m de haut — silhouette très large",
+      "prompt": "comic/prompts/char_brute.txt",
+      "usedPrompt": "comic/prompts/char_brute.txt",
       "referenceStatus": "generated",
-      "reference": "references/char_brute_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/char_brute_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/char_brute_3q_v1.png",
+      "reference": "comic/references/char_brute_comic_v1.png",
       "referenceSize": [
-        1225,
-        1284
-      ]
+        1024,
+        1536
+      ],
+      "referenceSha256": "42d5ddb859ab104bbad5a2e065a9fedc3d5c34d912819476c95847333d48fc54"
     },
     {
       "id": "weapon_boomstick",
@@ -249,17 +299,20 @@
       "lot": "C",
       "glb": "weapon_boomstick.glb",
       "hudPng": "weapon_boomstick.png",
-      "prompt": "prompts/weapon_boomstick.txt",
       "targetSize": "1,15 m de long",
+      "prompt": "comic/prompts/weapon_boomstick.txt",
+      "usedPrompt": "comic/prompts/weapon_boomstick.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_boomstick_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/weapon_boomstick_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/weapon_boomstick_3q_v1.png",
+      "reference": "comic/references/weapon_boomstick_comic_v1.png",
       "referenceSize": [
-        1536,
-        1024
-      ]
+        1774,
+        887
+      ],
+      "referenceSha256": "dee03df41688450fc0ab3078c398192d5285043241e8e12c4c51be0d4e8f8c31"
     },
     {
       "id": "weapon_knuckle_cannon",
@@ -267,17 +320,20 @@
       "lot": "C",
       "glb": "weapon_knuckle_cannon.glb",
       "hudPng": "weapon_knuckle_cannon.png",
-      "prompt": "prompts/weapon_knuckle_cannon.txt",
       "targetSize": "0,95 m de long",
+      "prompt": "comic/prompts/weapon_knuckle_cannon.txt",
+      "usedPrompt": "comic/prompts/weapon_knuckle_cannon.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_knuckle_cannon_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/weapon_knuckle_cannon_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/weapon_knuckle_cannon_3q_v1.png",
+      "reference": "comic/references/weapon_knuckle_cannon_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "94339b626fc5ed9e5772442f37bb5f4d8cc26ff79d16c3a68baaea2e5d5567b0"
     },
     {
       "id": "projectile_knuckle",
@@ -285,17 +341,20 @@
       "lot": "C",
       "glb": "projectile_knuckle.glb",
       "hudPng": "projectile_knuckle.png",
-      "prompt": "prompts/projectile_knuckle.txt",
       "targetSize": "0,45 m de diamètre",
+      "prompt": "comic/prompts/projectile_knuckle.txt",
+      "usedPrompt": "comic/prompts/projectile_knuckle.txt",
       "referenceStatus": "generated",
-      "reference": "references/projectile_knuckle_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/projectile_knuckle_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/projectile_knuckle_3q_v1.png",
+      "reference": "comic/references/projectile_knuckle_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "0c8c114a942b96d2671082a0a5c6115a595d384a9d08cab20bf1cc1ed2db16da"
     },
     {
       "id": "char_runner",
@@ -303,17 +362,20 @@
       "lot": "C",
       "glb": "char_runner.glb",
       "hudPng": "char_runner.png",
-      "prompt": "prompts/char_runner.txt",
       "targetSize": "1,70 m de haut — silhouette fine",
+      "prompt": "comic/prompts/char_runner.txt",
+      "usedPrompt": "comic/prompts/char_runner.txt",
       "referenceStatus": "generated",
-      "reference": "references/char_runner_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/char_runner_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/char_runner_3q_v1.png",
+      "reference": "comic/references/char_runner_comic_v1.png",
       "referenceSize": [
         1024,
         1536
-      ]
+      ],
+      "referenceSha256": "8ccffeb9346e06d5454e737b135dc27acf881a8beaba4c8ad55581caf59236f5"
     },
     {
       "id": "weapon_smg",
@@ -321,17 +383,20 @@
       "lot": "C",
       "glb": "weapon_smg.glb",
       "hudPng": "weapon_smg.png",
-      "prompt": "prompts/weapon_smg.txt",
       "targetSize": "0,65 m de long",
+      "prompt": "comic/prompts/weapon_smg.txt",
+      "usedPrompt": "comic/prompts/weapon_smg.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_smg_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/weapon_smg_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/weapon_smg_3q_v1.png",
+      "reference": "comic/references/weapon_smg_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "0e9601e50bd6641b0d67bbdcac1f1352508f6030a4a57f446531c5a47e37cfae"
     },
     {
       "id": "weapon_sawed_off",
@@ -339,17 +404,20 @@
       "lot": "C",
       "glb": "weapon_sawed_off.glb",
       "hudPng": "weapon_sawed_off.png",
-      "prompt": "prompts/weapon_sawed_off.txt",
       "targetSize": "0,48 m de long",
+      "prompt": "comic/prompts/weapon_sawed_off.txt",
+      "usedPrompt": "comic/prompts/weapon_sawed_off.txt",
       "referenceStatus": "generated",
-      "reference": "references/weapon_sawed_off_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/weapon_sawed_off_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/weapon_sawed_off_3q_v1.png",
+      "reference": "comic/references/weapon_sawed_off_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "5b8469b3f674cd8aa5ce817fdaeda1ccd3889a65da0af279480e10ee0dc47e8d"
     },
     {
       "id": "pickup_health_small",
@@ -357,17 +425,20 @@
       "lot": "D",
       "glb": "pickup_health_small.glb",
       "hudPng": "pickup_health_small.png",
-      "prompt": "prompts/pickup_health_small.txt",
       "targetSize": "0,45 × 0,30 × 0,35 m",
+      "prompt": "comic/prompts/pickup_health_small.txt",
+      "usedPrompt": "comic/prompts/pickup_health_small.txt",
       "referenceStatus": "generated",
-      "reference": "references/pickup_health_small_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/pickup_health_small_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/pickup_health_small_3q_v1.png",
+      "reference": "comic/references/pickup_health_small_comic_v1.png",
       "referenceSize": [
-        1374,
-        1145
-      ]
+        1470,
+        1070
+      ],
+      "referenceSha256": "2bbec48e3c4905d25c4a1778b519f1426d0669adf752c14c8004a4210890dbbc"
     },
     {
       "id": "pickup_health_mega",
@@ -375,17 +446,20 @@
       "lot": "D",
       "glb": "pickup_health_mega.glb",
       "hudPng": "pickup_health_mega.png",
-      "prompt": "prompts/pickup_health_mega.txt",
       "targetSize": "0,65 × 0,45 × 0,80 m",
+      "prompt": "comic/prompts/pickup_health_mega.txt",
+      "usedPrompt": "comic/prompts/pickup_health_mega.txt",
       "referenceStatus": "generated",
-      "reference": "references/pickup_health_mega_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/pickup_health_mega_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/pickup_health_mega_3q_v1.png",
+      "reference": "comic/references/pickup_health_mega_comic_v1.png",
       "referenceSize": [
-        1207,
-        1303
-      ]
+        1145,
+        1374
+      ],
+      "referenceSha256": "915b51a261a15b597cf2f38631ced4ada73522a3acdeaf2fac7b8b91cbde2637"
     },
     {
       "id": "pickup_armor",
@@ -393,17 +467,20 @@
       "lot": "D",
       "glb": "pickup_armor.glb",
       "hudPng": "pickup_armor.png",
-      "prompt": "prompts/pickup_armor.txt",
       "targetSize": "0,70 m de haut",
+      "prompt": "comic/prompts/pickup_armor.txt",
+      "usedPrompt": "comic/prompts/pickup_armor.txt",
       "referenceStatus": "generated",
-      "reference": "references/pickup_armor_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/pickup_armor_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/pickup_armor_3q_v1.png",
+      "reference": "comic/references/pickup_armor_comic_v1.png",
       "referenceSize": [
         1312,
         1199
-      ]
+      ],
+      "referenceSha256": "ac39fcd3e70f5330a1b786583fbbc0e9dbf93d056e7da6b743355dbd3fc5541f"
     },
     {
       "id": "pickup_overdrive",
@@ -411,17 +488,20 @@
       "lot": "D",
       "glb": "pickup_overdrive.glb",
       "hudPng": "pickup_overdrive.png",
-      "prompt": "prompts/pickup_overdrive.txt",
       "targetSize": "0,55 m de haut",
+      "prompt": "comic/prompts/pickup_overdrive.txt",
+      "usedPrompt": "comic/prompts/pickup_overdrive.txt",
       "referenceStatus": "generated",
-      "reference": "references/pickup_overdrive_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/pickup_overdrive_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/pickup_overdrive_3q_v1.png",
+      "reference": "comic/references/pickup_overdrive_comic_v1.png",
       "referenceSize": [
-        1225,
-        1284
-      ]
+        1145,
+        1374
+      ],
+      "referenceSha256": "ed97f421f4cc0e31670091308191e78cc93ecc58010431d761e0ae124e138563"
     },
     {
       "id": "prop_explosive_barrel",
@@ -429,17 +509,20 @@
       "lot": "D",
       "glb": "prop_explosive_barrel.glb",
       "hudPng": "prop_explosive_barrel.png",
-      "prompt": "prompts/prop_explosive_barrel.txt",
       "targetSize": "0,85 m de diamètre × 1,25 m de haut",
+      "prompt": "comic/prompts/prop_explosive_barrel.txt",
+      "usedPrompt": "comic/prompts/prop_explosive_barrel.txt",
       "referenceStatus": "generated",
-      "reference": "references/prop_explosive_barrel_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/prop_explosive_barrel_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/prop_explosive_barrel_3q_v1.png",
+      "reference": "comic/references/prop_explosive_barrel_comic_v1.png",
       "referenceSize": [
-        1214,
-        1295
-      ]
+        1122,
+        1402
+      ],
+      "referenceSha256": "60808bd83af80efdae00476da5da1eed23d0ea751f6d59a1488bcab0f973d8cc"
     },
     {
       "id": "prop_hazard_button",
@@ -447,17 +530,20 @@
       "lot": "D",
       "glb": "prop_hazard_button.glb",
       "hudPng": "prop_hazard_button.png",
-      "prompt": "prompts/prop_hazard_button.txt",
       "targetSize": "0,45 × 0,20 × 0,60 m",
+      "prompt": "comic/prompts/prop_hazard_button.txt",
+      "usedPrompt": "comic/prompts/prop_hazard_button.txt",
       "referenceStatus": "generated",
-      "reference": "references/prop_hazard_button_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/prop_hazard_button_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/prop_hazard_button_3q_v1.png",
+      "reference": "comic/references/prop_hazard_button_comic_v1.png",
       "referenceSize": [
-        1295,
-        1215
-      ]
+        1312,
+        1199
+      ],
+      "referenceSha256": "03b21e628cf10a10bdbf0716a02677edfe8157568d0f85fd1215ef8abe3153be"
     },
     {
       "id": "prop_jump_pad",
@@ -465,20 +551,24 @@
       "lot": "D",
       "glb": "prop_jump_pad.glb",
       "hudPng": "prop_jump_pad.png",
-      "prompt": "prompts/prop_jump_pad.txt",
       "targetSize": "2,50 × 2,50 × 0,35 m",
+      "prompt": "comic/prompts/prop_jump_pad.txt",
+      "usedPrompt": "comic/prompts/prop_jump_pad.txt",
       "referenceStatus": "generated",
-      "reference": "references/prop_jump_pad_3q_v1.png",
       "glbReceived": false,
       "hudPngReceived": false,
-      "usedPrompt": "prompts/generated/prop_jump_pad_3q_v1.txt",
+      "integrationStatus": "awaiting_comic_delivery",
+      "previousReference": "references/prop_jump_pad_3q_v1.png",
+      "reference": "comic/references/prop_jump_pad_comic_v1.png",
       "referenceSize": [
         1536,
         1024
-      ]
+      ],
+      "referenceSha256": "a600c6e2c9a66f01c2df2e90c5b57c0367f1e1857e8844d031c2a043f4e16630"
     }
   ],
-  "referenceFilenamePattern": "{id}_3q_v{version}.png",
+  "referenceFilenamePattern": "{id}_comic_v1.png",
   "generationTool": "imagegen_builtin",
-  "referencesGenerated": 26
+  "referencesGenerated": 26,
+  "previousArtDirection": "archive/industrial-v1/manifest.json"
 }

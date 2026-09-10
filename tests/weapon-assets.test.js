@@ -9,17 +9,12 @@ import { makeGunner, makeViewWeapon } from '../client/models.js';
 async function deliveredRifle() {
   const bytes = await readFile(
     new URL(
-      '../public/assets/weapons/weapon_assault_rifle.glb',
+      '../public/assets/weapons/weapon_assault_rifle_comic.glb',
       import.meta.url,
     ),
   );
-  // Decode the real GLB geometry with Three.js. Only browser image decoding is
-  // replaced here; the embedded image headers were checked during the delivery inspection.
+  // The comic GLB is portable without browser image decoding or PBR textures.
   const loader = new GLTFLoader();
-  loader.register(() => ({
-    name: 'test_texture_decoder',
-    loadTexture: () => Promise.resolve(new THREE.Texture()),
-  }));
   return loader.parseAsync(
     bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength),
     '',
@@ -52,7 +47,7 @@ function world() {
   };
 }
 
-void test('the delivered GLB parses and normalizes to a 1.05 m rifle pointing down -Z', async () => {
+void test('the comic GLB preserves the delivered silhouette, triangle count and 1.05 m muzzle alignment', async () => {
   const { scene } = await deliveredRifle();
   const rifle = normalizeRifle(scene);
   const bounds = new THREE.Box3().setFromObject(rifle);
@@ -100,6 +95,13 @@ void test('FPS and opponent share one load, replace fallbacks, and switch the op
   const thirdMesh = thirdPerson.getObjectByProperty('isMesh', true);
   assert.equal(firstMesh.geometry, thirdMesh.geometry);
   assert.equal(firstMesh.material.map, thirdMesh.material.map);
+  assert.ok(firstMesh.material.isMeshToonMaterial);
+  assert.equal(firstMesh.material.map, null);
+  assert.equal(firstMesh.material.gradientMap, thirdMesh.material.gradientMap);
+  assert.deepEqual(
+    [...firstMesh.material.gradientMap.image.data],
+    [55, 145, 255],
+  );
   assert.notEqual(firstMesh.material, thirdMesh.material);
   assert.equal(
     firstMesh.material.depthTest,

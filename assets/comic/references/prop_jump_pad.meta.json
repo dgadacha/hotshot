@@ -1,0 +1,53 @@
+{
+  "id": "prop_jump_pad",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-63207af4-c2f0-4dae-ae93-89107966b647.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    77,
+    57,
+    1459,
+    1005
+  ],
+  "marginFractionsLTRB": [
+    0.050130208333333336,
+    0.0556640625,
+    0.050130208333333336,
+    0.0185546875
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete octagonal platform with cyan top, yellow chevrons and two attached side spring housings.",
+    "Appears to include extra pink supports beyond four requested feet. Silver bolts and some glossy highlights remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    80,
+    112,
+    1456,
+    944
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.052083333333333336,
+    0.109375,
+    0.052083333333333336,
+    0.078125
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4748547871907552,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

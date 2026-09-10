@@ -1,0 +1,53 @@
+{
+  "id": "weapon_boomstick",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-956dca7f-bbfc-4d62-8b3b-51ef022a14be.png",
+  "referenceSize": [
+    1774,
+    887
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    21,
+    9,
+    1762,
+    871
+  ],
+  "marginFractionsLTRB": [
+    0.011837655016910935,
+    0.010146561443066516,
+    0.006764374295377677,
+    0.018038331454340473
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete single oversized shotgun, two side-by-side bores, strong heavy silhouette.",
+    "Some extra smooth tonal shading and glossy bevels remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    26,
+    120,
+    1748,
+    706
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.014656144306651634,
+    0.13528748590755355,
+    0.014656144306651634,
+    0.2040586245772266
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5804403833908047,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

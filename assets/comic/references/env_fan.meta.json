@@ -1,0 +1,52 @@
+{
+  "id": "env_fan",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-3a7280bf-eeef-42c0-8f87-d2b8eb4cb908.png",
+  "referenceSize": [
+    1304,
+    1206
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    140,
+    60,
+    1225,
+    1148
+  ],
+  "marginFractionsLTRB": [
+    0.10736196319018405,
+    0.04975124378109453,
+    0.06058282208588957,
+    0.04809286898839138
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete square fan with exactly four clear stationary blades, attached thick grille and readable frame depth.",
+    "Some highlights and extra gray tones on fasteners remain; requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    143,
+    63,
+    1222,
+    1144
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.10966257668711657,
+    0.05223880597014925,
+    0.06288343558282208,
+    0.05140961857379768
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.38410897964166896,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

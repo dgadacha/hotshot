@@ -1,0 +1,53 @@
+{
+  "id": "arms_gunner",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-3ae58d0d-1eba-406e-869b-0991a4b39682.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    75,
+    21,
+    1461,
+    1000
+  ],
+  "marginFractionsLTRB": [
+    0.048828125,
+    0.0205078125,
+    0.048828125,
+    0.0234375
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Both matching muscular adult forearms fully visible, separated hands with five digits each, no weapon or gore.",
+    "Clean comic outlines; slight soft tonal shifts on skin and gloves.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    78,
+    92,
+    1458,
+    936
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.05078125,
+    0.08984375,
+    0.05078125,
+    0.0859375
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.6722151438395182,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

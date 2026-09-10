@@ -1,0 +1,53 @@
+{
+  "id": "projectile_grenade",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-8643af72-c1d1-4869-b1cd-29ef889f5349.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    0,
+    56,
+    1523,
+    960
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.0546875,
+    0.008463541666666666,
+    0.0625
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Full single rounded canister visible with chunky ribs and violet end rings.",
+    "Two coral indicators appear rather than requested single indicator; some slight soft shading.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    149,
+    59,
+    1398,
+    957
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.09700520833333333,
+    0.0576171875,
+    0.08984375,
+    0.0654296875
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.48568979899088544,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

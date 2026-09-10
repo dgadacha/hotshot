@@ -1,0 +1,53 @@
+{
+  "id": "projectile_knuckle",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-8f7750a8-cd71-4d53-944f-be8d771a5d51.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    111,
+    72,
+    1376,
+    968
+  ],
+  "marginFractionsLTRB": [
+    0.072265625,
+    0.0703125,
+    0.10416666666666667,
+    0.0546875
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete single slug, four-lobed cap and one cyan side indicator, no effects or loose pieces.",
+    "Front shadow shifts toward warm tan instead of requested violet; some soft tonal shading.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    169,
+    75,
+    1372,
+    929
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.11002604166666667,
+    0.0732421875,
+    0.10677083333333333,
+    0.0927734375
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5441474914550781,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

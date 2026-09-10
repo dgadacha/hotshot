@@ -1,0 +1,10 @@
+{
+  "id": "prop_explosive_barrel",
+  "reference": "references/prop_explosive_barrel_3q_v1.png",
+  "usedPrompt": "prompts/generated/prop_explosive_barrel_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1214,
+    1295
+  ]
+}

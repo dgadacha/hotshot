@@ -1,0 +1,53 @@
+{
+  "id": "prop_hazard_button",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-b2295b46-d370-460c-bc9a-4d1705f1c180.png",
+  "referenceSize": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    0,
+    60,
+    1209,
+    1126
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.05004170141784821,
+    0.07850609756097561,
+    0.060884070058381985
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete single coral-red mushroom button on yellow backplate with four purple corner bolts.",
+    "Some smooth tonal changes and warm yellow shadows remain instead of exclusively violet shadows.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    152,
+    64,
+    1206,
+    1122
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.11585365853658537,
+    0.05337781484570475,
+    0.08079268292682927,
+    0.06422018348623854
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4098556469822413,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

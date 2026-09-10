@@ -1,0 +1,53 @@
+{
+  "id": "weapon_knuckle_cannon",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-ce1a9657-1929-4ade-bcf3-6ddde51cf6cb.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    47,
+    41,
+    1495,
+    970
+  ],
+  "marginFractionsLTRB": [
+    0.030598958333333332,
+    0.0400390625,
+    0.026692708333333332,
+    0.052734375
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Complete connected heavy cannon with four muzzle lobes and large pink rear tank; no numbers on gauge.",
+    "Piston shafts use silver-white highlights, more reflective than strict matte aplats.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    52,
+    44,
+    1492,
+    924
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.033854166666666664,
+    0.04296875,
+    0.028645833333333332,
+    0.09765625
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.4927285512288411,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

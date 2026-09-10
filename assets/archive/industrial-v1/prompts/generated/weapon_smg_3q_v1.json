@@ -1,0 +1,10 @@
+{
+  "id": "weapon_smg",
+  "reference": "references/weapon_smg_3q_v1.png",
+  "usedPrompt": "prompts/generated/weapon_smg_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

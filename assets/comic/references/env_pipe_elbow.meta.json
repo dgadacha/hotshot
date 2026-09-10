@@ -1,0 +1,52 @@
+{
+  "id": "env_pipe_elbow",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-5e70b9ac-e21c-4dd6-b021-68deff26997f.png",
+  "referenceSize": [
+    1374,
+    1145
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    0,
+    21,
+    1338,
+    1145
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.01834061135371179,
+    0.026200873362445413,
+    0.0
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Entire elbow with both open ends and six large bolts on each flange, clean saturated palette.",
+    "Some additional hue steps and soft shading remain; requested 12% margins not met."
+  ],
+  "opaqueAlphaBBox": [
+    108,
+    67,
+    1296,
+    1081
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.07860262008733625,
+    0.05851528384279476,
+    0.056768558951965066,
+    0.05589519650655022
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5862594789064536,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

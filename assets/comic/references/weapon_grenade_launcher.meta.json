@@ -1,0 +1,54 @@
+{
+  "id": "weapon_grenade_launcher",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-3a7c97fa-cbf3-4465-b493-d7066f530891.png",
+  "referenceSize": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaBBox": [
+    0,
+    9,
+    1491,
+    1000
+  ],
+  "marginFractionsLTRB": [
+    0.0,
+    0.0087890625,
+    0.029296875,
+    0.0234375
+  ],
+  "marginRequirementMet": false,
+  "visualQA": "reviewed_with_limitations",
+  "qaNotes": [
+    "Full single weapon visible, broad cylindrical launcher silhouette and clean comic palette.",
+    "Drum appears to have more than four chambers.",
+    "Minor glossy bevel highlights/soft shifts remain.",
+    "Requested 12% transparent margins are not met."
+  ],
+  "opaqueAlphaBBox": [
+    50,
+    74,
+    1483,
+    884
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.032552083333333336,
+    0.072265625,
+    0.034505208333333336,
+    0.13671875
+  ],
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.5406087239583334,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

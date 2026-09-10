@@ -1,0 +1,53 @@
+{
+  "id": "weapon_assault_rifle",
+  "status": "generated",
+  "sourcePath": "/Users/dylan/.codex/generated_images/01a08af9-34dd-79c2-ac5a-1dfcb1e2f224/exec-09428cfd-492a-4b3c-9386-f246cd71ed56.png",
+  "referenceSize": [
+    1774,
+    887
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaBBox": [
+    30,
+    45,
+    1743,
+    871
+  ],
+  "qaNotes": [
+    "Full asset visible with genuine alpha; clean bold comic palette and largely flat facets.",
+    "Requested 12% margins NOT met: output is tightly cropped.",
+    "Some narrow glossy bevel highlights and limited soft shading remain, though no rust or gritty microtexture."
+  ],
+  "visualQA": "reviewed_with_limitations",
+  "opaqueAlphaBBox": [
+    35,
+    48,
+    1739,
+    836
+  ],
+  "opaqueMarginFractionsLTRB": [
+    0.019729425028184894,
+    0.05411499436302142,
+    0.019729425028184894,
+    0.05749718151071026
+  ],
+  "marginFractionsLTRB": [
+    0.016910935738444193,
+    0.05073280721533258,
+    0.017474633596392335,
+    0.018038331454340473
+  ],
+  "marginRequirementMet": false,
+  "opaqueMarginRequirementMet": false,
+  "transparentPixelFraction": 0.6309234349599437,
+  "canvasEdgeCornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

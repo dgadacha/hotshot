@@ -50,6 +50,11 @@ export class Game {
     this.messageTimer = 0;
     this.feed = '';
     this.feedTimer = 0;
+    this.comic = { text: '', tone: 'shot', id: 0 };
+    this.comicTimer = 0;
+    this.comicCooldown = 0;
+    this.comicPriority = 0;
+    this.wasRolling = false;
     this.paused = false;
     this.correction = new THREE.Vector3();
     this.previewCooldown = 0;
@@ -317,6 +322,9 @@ export class Game {
     this.feed = '';
     this.hit = 0;
     this.hurt = 0;
+    this.comicTimer = 0;
+    this.comicCooldown = 0;
+    this.wasRolling = false;
     this.paused = false;
     this.clearInput();
     this.room = '';
@@ -440,6 +448,14 @@ export class Game {
     this.kick = Math.min(1.6, this.kick + (weapon === 'grenade' ? 0.9 : 0.5));
     this.flash = 0.055;
     this.audio.shot(weapon === 'grenade');
+    this.comicBeat(weapon === 'grenade' ? 'THOOM!' : 'BAM!', 'shot', 0);
+  }
+  comicBeat(text, tone, priority = 1) {
+    if (this.comicCooldown > 0 && priority <= this.comicPriority) return;
+    this.comic = { text, tone, id: this.comic.id + 1 };
+    this.comicPriority = priority;
+    this.comicTimer = priority > 1 ? 0.85 : 0.5;
+    this.comicCooldown = priority > 1 ? 1 : 0.7;
   }
   accept(snapshot) {
     const before = this.local,
@@ -514,21 +530,30 @@ export class Game {
     if (e.type === 'explosion') {
       this.effects.burst(e, 40, true);
       this.audio.explosion();
-      if (this.local && Math.hypot(this.local.x - e.x, this.local.z - e.z) < 8)
+      if (
+        this.local &&
+        Math.hypot(this.local.x - e.x, this.local.z - e.z) < 8
+      ) {
         this.kick = Math.min(1.5, this.kick + 0.7);
+        this.comicBeat('BOOM!', 'boom', 2);
+      }
     }
     if (e.type === 'hit') {
       if (e.player === this.id && e.victim !== this.id) {
         this.hit = 0.14;
         this.audio.hit(e.headshot);
         if (this.damageNumbers) this.effects.label(e);
+        if (e.headshot) this.comicBeat('HEADSHOT!', 'hit', 2);
       }
       if (e.victim === this.id) {
         this.hurt = 0.5;
         this.kick += 0.2;
       }
     }
-    if (e.type === 'reload' && e.player === this.id) this.audio.reload();
+    if (e.type === 'reload' && e.player === this.id) {
+      this.audio.reload();
+      this.comicBeat('CLACK!', 'reload');
+    }
     if (e.type === 'reload_done' && e.player === this.id)
       this.audio.tone(270, 0.08, 'triangle', 0.15);
     if (e.type === 'kill') {
@@ -536,8 +561,10 @@ export class Game {
       this.feedTimer = 4;
       if (e.player === this.id && e.victim !== this.id) {
         this.audio.kill();
-        this.message = this.local.score === 1 ? 'FIRST BLOOD!' : 'ELIMINATED';
+        this.message =
+          this.local.score === 1 ? 'PREMIER K.O. !' : 'BIEN JOUÉ !';
         this.messageTimer = 1.5;
+        this.comicBeat('K.O.!', 'hit', 3);
       }
     }
     if (e.type === 'message') {
@@ -562,12 +589,17 @@ export class Game {
     this.hit = Math.max(0, this.hit - dt);
     this.hurt = Math.max(0, this.hurt - dt);
     this.flash = Math.max(0, this.flash - dt);
+    this.comicTimer = Math.max(0, this.comicTimer - dt);
+    this.comicCooldown = Math.max(0, this.comicCooldown - dt);
     this.messageTimer -= dt;
     this.feedTimer -= dt;
     this.correction.multiplyScalar(Math.exp(-dt * 14));
     this.effects.update(dt);
     const p = this.local,
       camera = this.world.camera;
+    const rolling = p.hp > 0 && p.rollTime > 0;
+    if (rolling && !this.wasRolling) this.comicBeat('WHOOSH!', 'roll', 2);
+    this.wasRolling = rolling;
     const speed = Math.hypot(p.vx, p.vz),
       bob = p.grounded
         ? Math.sin(now * speed * 1.15) * Math.min(speed * 0.0025, 0.03)
@@ -692,7 +724,7 @@ export class Game {
       if (!mesh) {
         mesh = new THREE.Mesh(
           new THREE.IcosahedronGeometry(0.16, 0),
-          this.world.mat(0xffb93c, true),
+          this.world.mat(0xffe234),
         );
         mesh.position.set(g.x, g.y, g.z);
         this.world.scene.add(mesh);
@@ -735,6 +767,8 @@ export class Game {
       feed: this.feedTimer > 0 ? this.feed : '',
       hit: this.hit,
       hurt: this.hurt,
+      comic: this.comicTimer > 0 ? this.comic : null,
+      speedLines: p.hp > 0 && (p.rollTime > 0 || p.slideTime > 0),
       kills: p.score,
       room: this.room || '',
       ping: s.ping || 0,

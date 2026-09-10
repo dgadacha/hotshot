@@ -1,0 +1,10 @@
+{
+  "id": "projectile_knuckle",
+  "reference": "references/projectile_knuckle_3q_v1.png",
+  "usedPrompt": "prompts/generated/projectile_knuckle_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

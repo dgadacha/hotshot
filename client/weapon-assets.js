@@ -1,6 +1,37 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RIFLE_ASSET_URL } from './asset-paths.js';
+import { COMIC, createToonRamp, toonMaterial } from './toon.js';
+
+function applyComicMaterials(scene) {
+  const ramp = createToonRamp();
+  const converted = new Map();
+  const retired = new Set();
+  scene.traverse((object) => {
+    if (!object.isMesh) return;
+    const convert = (original) => {
+      if (converted.has(original)) return converted.get(original);
+      const material = toonMaterial(
+        original.color?.getHex() ?? COMIC.cyan,
+        ramp,
+        {
+          side: original.side,
+        },
+      );
+      material.name = original.name;
+      converted.set(original, material);
+      retired.add(original);
+      for (const value of Object.values(original))
+        if (value?.isTexture) retired.add(value);
+      return material;
+    };
+    object.material = Array.isArray(object.material)
+      ? object.material.map(convert)
+      : convert(object.material);
+  });
+  for (const resource of retired) resource.dispose();
+  if (!converted.size) ramp.dispose();
+}
 
 // This delivery points down -X. The game uses -Z; the stock ends at Z=0.
 export function normalizeRifle(scene) {
@@ -106,6 +137,7 @@ export function createWeaponAssets({ loader = new GLTFLoader() } = {}) {
       }
       try {
         source = normalizeRifle(scene);
+        applyComicMaterials(scene);
       } catch (error) {
         disposeSource(scene);
         throw error;
