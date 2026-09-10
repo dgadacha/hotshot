@@ -1,7 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
   "engine": "three.js",
-  "referenceSuffix": "_3q.png",
   "deliveryDirectory": "incoming",
   "artDirection": "HOTSHOT — chunky cartoon industrial",
   "assets": [
@@ -13,10 +12,15 @@
       "hudPng": "char_gunner.png",
       "prompt": "prompts/char_gunner.txt",
       "targetSize": "1,85 m de haut",
-      "referenceStatus": "blocked_image_usage_limit",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/char_gunner_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_gunner_3q_v1.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ]
     },
     {
       "id": "weapon_assault_rifle",
@@ -26,10 +30,15 @@
       "hudPng": "weapon_assault_rifle.png",
       "prompt": "prompts/weapon_assault_rifle.txt",
       "targetSize": "1,05 m de long",
-      "referenceStatus": "draft_needs_framing_review",
-      "reference": "references/weapon_assault_rifle_3q_v1.png",
+      "referenceStatus": "generated",
+      "reference": "references/weapon_assault_rifle_3q_v2.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_assault_rifle_3q_v2.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "weapon_grenade_launcher",
@@ -39,10 +48,15 @@
       "hudPng": "weapon_grenade_launcher.png",
       "prompt": "prompts/weapon_grenade_launcher.txt",
       "targetSize": "0,85 m de long",
-      "referenceStatus": "blocked_image_usage_limit",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/weapon_grenade_launcher_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_grenade_launcher_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "projectile_grenade",
@@ -52,10 +66,15 @@
       "hudPng": "projectile_grenade.png",
       "prompt": "prompts/projectile_grenade.txt",
       "targetSize": "0,28 m de diamètre",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/projectile_grenade_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/projectile_grenade_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "arms_gunner",
@@ -65,10 +84,15 @@
       "hudPng": "arms_gunner.png",
       "prompt": "prompts/arms_gunner.txt",
       "targetSize": "Avant-bras d’environ 0,40 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/arms_gunner_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/arms_gunner_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "env_container",
@@ -78,10 +102,15 @@
       "hudPng": "env_container.png",
       "prompt": "prompts/env_container.txt",
       "targetSize": "6 × 3 × 3,20 m (L × P × H)",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_container_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_container_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "env_crate",
@@ -91,10 +120,15 @@
       "hudPng": "env_crate.png",
       "prompt": "prompts/env_crate.txt",
       "targetSize": "3 × 3 × 2 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_crate_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_crate_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "env_press",
@@ -104,10 +138,15 @@
       "hudPng": "env_press.png",
       "prompt": "prompts/env_press.txt",
       "targetSize": "2,20 × 5,50 × 2,20 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_press_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_press_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "env_pipe_elbow",
@@ -117,10 +156,15 @@
       "hudPng": "env_pipe_elbow.png",
       "prompt": "prompts/env_pipe_elbow.txt",
       "targetSize": "Diamètre extérieur 0,70 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_pipe_elbow_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_pipe_elbow_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
     },
     {
       "id": "env_fan",
@@ -130,10 +174,15 @@
       "hudPng": "env_fan.png",
       "prompt": "prompts/env_fan.txt",
       "targetSize": "2,50 × 0,70 × 2,50 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_fan_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_fan_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
     },
     {
       "id": "env_gantry_crane",
@@ -143,10 +192,15 @@
       "hudPng": "env_gantry_crane.png",
       "prompt": "prompts/env_gantry_crane.txt",
       "targetSize": "42 m de portée × 20 m de haut",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_gantry_crane_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_gantry_crane_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "env_scrap_pile",
@@ -156,10 +210,15 @@
       "hudPng": "env_scrap_pile.png",
       "prompt": "prompts/env_scrap_pile.txt",
       "targetSize": "3 × 2 × 1,50 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/env_scrap_pile_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/env_scrap_pile_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "char_brute",
@@ -169,10 +228,15 @@
       "hudPng": "char_brute.png",
       "prompt": "prompts/char_brute.txt",
       "targetSize": "2,10 m de haut — silhouette très large",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/char_brute_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_brute_3q_v1.txt",
+      "referenceSize": [
+        1225,
+        1284
+      ]
     },
     {
       "id": "weapon_boomstick",
@@ -182,10 +246,15 @@
       "hudPng": "weapon_boomstick.png",
       "prompt": "prompts/weapon_boomstick.txt",
       "targetSize": "1,15 m de long",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/weapon_boomstick_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_boomstick_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "weapon_knuckle_cannon",
@@ -195,10 +264,15 @@
       "hudPng": "weapon_knuckle_cannon.png",
       "prompt": "prompts/weapon_knuckle_cannon.txt",
       "targetSize": "0,95 m de long",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/weapon_knuckle_cannon_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_knuckle_cannon_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "projectile_knuckle",
@@ -208,10 +282,15 @@
       "hudPng": "projectile_knuckle.png",
       "prompt": "prompts/projectile_knuckle.txt",
       "targetSize": "0,45 m de diamètre",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/projectile_knuckle_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/projectile_knuckle_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "char_runner",
@@ -221,10 +300,15 @@
       "hudPng": "char_runner.png",
       "prompt": "prompts/char_runner.txt",
       "targetSize": "1,70 m de haut — silhouette fine",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/char_runner_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/char_runner_3q_v1.txt",
+      "referenceSize": [
+        1024,
+        1536
+      ]
     },
     {
       "id": "weapon_smg",
@@ -234,10 +318,15 @@
       "hudPng": "weapon_smg.png",
       "prompt": "prompts/weapon_smg.txt",
       "targetSize": "0,65 m de long",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/weapon_smg_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_smg_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "weapon_sawed_off",
@@ -247,10 +336,15 @@
       "hudPng": "weapon_sawed_off.png",
       "prompt": "prompts/weapon_sawed_off.txt",
       "targetSize": "0,48 m de long",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/weapon_sawed_off_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/weapon_sawed_off_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     },
     {
       "id": "pickup_health_small",
@@ -260,10 +354,15 @@
       "hudPng": "pickup_health_small.png",
       "prompt": "prompts/pickup_health_small.txt",
       "targetSize": "0,45 × 0,30 × 0,35 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/pickup_health_small_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_health_small_3q_v1.txt",
+      "referenceSize": [
+        1374,
+        1145
+      ]
     },
     {
       "id": "pickup_health_mega",
@@ -273,10 +372,15 @@
       "hudPng": "pickup_health_mega.png",
       "prompt": "prompts/pickup_health_mega.txt",
       "targetSize": "0,65 × 0,45 × 0,80 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/pickup_health_mega_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_health_mega_3q_v1.txt",
+      "referenceSize": [
+        1207,
+        1303
+      ]
     },
     {
       "id": "pickup_armor",
@@ -286,10 +390,15 @@
       "hudPng": "pickup_armor.png",
       "prompt": "prompts/pickup_armor.txt",
       "targetSize": "0,70 m de haut",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/pickup_armor_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_armor_3q_v1.txt",
+      "referenceSize": [
+        1312,
+        1199
+      ]
     },
     {
       "id": "pickup_overdrive",
@@ -299,10 +408,15 @@
       "hudPng": "pickup_overdrive.png",
       "prompt": "prompts/pickup_overdrive.txt",
       "targetSize": "0,55 m de haut",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/pickup_overdrive_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/pickup_overdrive_3q_v1.txt",
+      "referenceSize": [
+        1225,
+        1284
+      ]
     },
     {
       "id": "prop_explosive_barrel",
@@ -312,10 +426,15 @@
       "hudPng": "prop_explosive_barrel.png",
       "prompt": "prompts/prop_explosive_barrel.txt",
       "targetSize": "0,85 m de diamètre × 1,25 m de haut",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/prop_explosive_barrel_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_explosive_barrel_3q_v1.txt",
+      "referenceSize": [
+        1214,
+        1295
+      ]
     },
     {
       "id": "prop_hazard_button",
@@ -325,10 +444,15 @@
       "hudPng": "prop_hazard_button.png",
       "prompt": "prompts/prop_hazard_button.txt",
       "targetSize": "0,45 × 0,20 × 0,60 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/prop_hazard_button_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_hazard_button_3q_v1.txt",
+      "referenceSize": [
+        1295,
+        1215
+      ]
     },
     {
       "id": "prop_jump_pad",
@@ -338,10 +462,18 @@
       "hudPng": "prop_jump_pad.png",
       "prompt": "prompts/prop_jump_pad.txt",
       "targetSize": "2,50 × 2,50 × 0,35 m",
-      "referenceStatus": "not_generated",
-      "reference": null,
+      "referenceStatus": "generated",
+      "reference": "references/prop_jump_pad_3q_v1.png",
       "glbReceived": false,
-      "hudPngReceived": false
+      "hudPngReceived": false,
+      "usedPrompt": "prompts/generated/prop_jump_pad_3q_v1.txt",
+      "referenceSize": [
+        1536,
+        1024
+      ]
     }
-  ]
+  ],
+  "referenceFilenamePattern": "{id}_3q_v{version}.png",
+  "generationTool": "imagegen_builtin",
+  "referencesGenerated": 26
 }

@@ -1,0 +1,10 @@
+{
+  "id": "char_brute",
+  "reference": "references/char_brute_3q_v1.png",
+  "usedPrompt": "prompts/generated/char_brute_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1225,
+    1284
+  ]
+}

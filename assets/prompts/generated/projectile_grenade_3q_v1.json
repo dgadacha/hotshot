@@ -1,0 +1,10 @@
+{
+  "id": "projectile_grenade",
+  "reference": "references/projectile_grenade_3q_v1.png",
+  "usedPrompt": "prompts/generated/projectile_grenade_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

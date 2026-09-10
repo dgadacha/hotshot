@@ -1,0 +1,10 @@
+{
+  "id": "weapon_grenade_launcher",
+  "reference": "references/weapon_grenade_launcher_3q_v1.png",
+  "usedPrompt": "prompts/generated/weapon_grenade_launcher_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

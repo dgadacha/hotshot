@@ -1,0 +1,10 @@
+{
+  "id": "char_runner",
+  "reference": "references/char_runner_3q_v1.png",
+  "usedPrompt": "prompts/generated/char_runner_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1024,
+    1536
+  ]
+}

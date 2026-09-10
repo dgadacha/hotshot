@@ -1,0 +1,10 @@
+{
+  "id": "arms_gunner",
+  "reference": "references/arms_gunner_3q_v1.png",
+  "usedPrompt": "prompts/generated/arms_gunner_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

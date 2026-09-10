@@ -4,7 +4,7 @@
 
 ## Le processus convenu
 
-1. Codex génère **une référence par asset**, en vue 3/4 dans la DA HOTSHOT. Le fichier est nommé `<asset>_3q.png`.
+1. Codex génère **une référence par asset**, en vue 3/4 dans la DA HOTSHOT. Les références sont versionnées sous le nom `<asset>_3q_vN.png` ; le manifeste et la galerie indiquent la version sélectionnée.
 2. Tu utilises cette référence pour créer le modèle 3D et son image de HUD, puis tu déposes `<asset>.glb` et `<asset>.png` dans [incoming/](incoming/).
 3. Codex inspecte le GLB et le PNG, ajuste l’échelle, l’orientation, le pivot et les matériaux, puis les branche au jeu. Les dimensions de gameplay servent de référence pour les collisions.
 4. On vérifie l’asset dans le jeu, surtout les armes en vue FPS et la lisibilité du personnage à distance, puis on passe aux assets suivants.
@@ -326,10 +326,17 @@ Subject: ONE low broad industrial jump-pad platform for a cartoon arena. A thick
 Create a single game-ready 3D asset from this reference image. Preserve its chunky stylized silhouette, proportions, broad color areas and industrial cartoon materials. Infer the unseen surfaces consistently. Generate only the asset itself, without background, floor, pedestal, lighting rigs, cast shadows or extra props. Produce a self-contained textured GLB. Use the supplied target dimensions if your workflow supports exact scale. Keep materials simple and texture resolution at or below 2048 pixels. Where supported, preserve major mechanical parts as separate meshes. Do not invent accessories or merge a character with a weapon. For a character, preserve the neutral A-pose; deliver a rig only if your workflow actually supports rigging, and report which animations are included.
 ```
 
-## État des premières générations
+## Références générées — 10 septembre 2026
 
-- **Assault Rifle** : une première référence a été créée avec l’outil imagegen intégré. Elle est conservée dans [references/weapon_assault_rifle_3q_v1.png](references/weapon_assault_rifle_3q_v1.png). Son cadrage est trop serré pour valider la référence de production ; une passe avec davantage de marge reste souhaitable. Le PNG est RGBA ; son détourage et les pixels translucides devront être revérifiés sur fond clair avant de l’utiliser pour le HUD. Aucun GLB ni PNG de HUD final n’a encore été livré.
-- **Gunner** et **Grenade Launcher** : génération non aboutie, bloquée par la limite d’utilisation du service d’images. Les prompts sont enregistrés et prêts à reprendre. Le service a indiqué un renouvellement le 10 septembre 2026 vers **18 h 32, heure de Nouméa** ; il faudra vérifier la disponibilité lors de la reprise.
-- Les 23 autres références n’ont pas encore été lancées. Elles suivront cet ordre de production.
+**Les 26 assets disposent de leur image 3/4.** La [galerie complète](REFERENCES.md) associe chaque PNG au prompt exact utilisé et aux noms des fichiers GLB/PNG à livrer.
 
-Le prompt exact utilisé pour le premier fusil est conservé dans [weapon_assault_rifle.v1.used.txt](prompts/weapon_assault_rifle.v1.used.txt). Mode utilisé : **outil imagegen intégré**, sans appel à une API payante externe. Une génération via le CLI/API serait une alternative sur demande explicite, avec une clé `OPENAI_API_KEY` configurée dans l’environnement.
+- Lot A : 5 références — Gunner, ses deux armes, sa grenade et ses bras FPS.
+- Lot B : 7 références — tous les éléments de décor de Scrapyard.
+- Lot C : 7 références — Brute, Runner, leurs quatre armes et le projectile du Knuckle Cannon.
+- Lot D : 7 références — soins, armure, Overdrive et objets interactifs.
+
+Le [manifeste](manifest.json) référence les 26 PNG sélectionnés, leurs dimensions et leurs prompts. Le fusil d’assaut utilise la version 2 ; la première version reste archivée dans le dépôt. Les autres références utilisent leur version 1. Les cadrages conservent chaque asset entier ; certains restent serrés et ne remplacent pas le cadrage final des icônes de HUD.
+
+Les images ont été revues visuellement et les fichiers PNG RGBA vérifiés. Aucun GLB ni PNG de HUD final n’a encore été livré : la prochaine étape est leur génération à partir de ces références, puis leur dépôt dans `incoming/`.
+
+Mode utilisé : **outil imagegen intégré**. Chaque prompt exact est conservé dans `prompts/generated/`, avec une fiche JSON correspondant à l’image. Les prompts de base restent disponibles dans `prompts/`.

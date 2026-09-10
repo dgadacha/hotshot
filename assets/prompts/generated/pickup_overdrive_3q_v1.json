@@ -1,0 +1,10 @@
+{
+  "id": "pickup_overdrive",
+  "reference": "references/pickup_overdrive_3q_v1.png",
+  "usedPrompt": "prompts/generated/pickup_overdrive_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1225,
+    1284
+  ]
+}

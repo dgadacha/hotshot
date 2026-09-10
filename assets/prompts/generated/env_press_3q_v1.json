@@ -1,0 +1,10 @@
+{
+  "id": "env_press",
+  "reference": "references/env_press_3q_v1.png",
+  "usedPrompt": "prompts/generated/env_press_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

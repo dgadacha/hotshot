@@ -1,0 +1,10 @@
+{
+  "id": "weapon_assault_rifle",
+  "reference": "references/weapon_assault_rifle_3q_v2.png",
+  "usedPrompt": "prompts/generated/weapon_assault_rifle_3q_v2.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}

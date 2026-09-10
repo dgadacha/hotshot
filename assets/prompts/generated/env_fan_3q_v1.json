@@ -1,0 +1,10 @@
+{
+  "id": "env_fan",
+  "reference": "references/env_fan_3q_v1.png",
+  "usedPrompt": "prompts/generated/env_fan_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1312,
+    1199
+  ]
+}

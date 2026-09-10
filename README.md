@@ -6,7 +6,7 @@ Dépôt principal : [dgadacha/hotshot](https://github.com/dgadacha/hotshot).
 
 ## Assets 3D et références
 
-Le [catalogue de production](assets/ASSET_PRODUCTION.md) contient la liste des 26 GLB, les prompts des vues 3/4 et les conventions de livraison. Les prompts individuels sont dans [assets/prompts/](assets/prompts/) et les images générées dans [assets/references/](assets/references/).
+Le [catalogue de production](assets/ASSET_PRODUCTION.md) contient la liste des 26 GLB, les prompts des vues 3/4 et les conventions de livraison. Les **26 références 3/4 générées** sont réunies dans la [galerie des assets](assets/REFERENCES.md), avec leurs prompts exacts et les noms des GLB/PNG attendus. Les prompts individuels sont dans [assets/prompts/](assets/prompts/) et les images originales dans [assets/references/](assets/references/).
 
 Déposer chaque modèle et son PNG de HUD dans [assets/incoming/](assets/incoming/), avec le même nom de base, par exemple `weapon_assault_rifle.glb` et `weapon_assault_rifle.png`. Sur le poste de développement actuel, le raccourci `Documents/hotshot/assets` conserve l'accès au même dossier.
 

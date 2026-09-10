@@ -1,0 +1,10 @@
+{
+  "id": "env_scrap_pile",
+  "reference": "references/env_scrap_pile_3q_v1.png",
+  "usedPrompt": "prompts/generated/env_scrap_pile_3q_v1.txt",
+  "referenceStatus": "generated",
+  "referenceSize": [
+    1536,
+    1024
+  ]
+}
